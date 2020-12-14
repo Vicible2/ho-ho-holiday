@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5 {
 p {
   font-family: "Open Sans Condensed", sans-serif;
   color: #E1F2F7;
+  margin: 0;
 }
 
 .navbar-brand {
@@ -20,9 +21,9 @@ p {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  padding: 25px;
+  padding: 10px;
   color: #E1F2F7;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .nav-link:hover {

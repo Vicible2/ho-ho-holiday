@@ -24,6 +24,11 @@ h1,h2,h3,h4,h5{
 p{
     font-family: $contentfont;
     color: $silverblue;
+    margin: 0;
+}
+
+.nav{
+    
 }
 
 .navbar-brand{
@@ -31,9 +36,11 @@ p{
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    padding: 25px;
+    padding: 10px;
     color:#E1F2F7; 
-    font-size: 30px; 
+    font-size: 20px; 
+   
+
 }
 
 .nav-link:hover{
