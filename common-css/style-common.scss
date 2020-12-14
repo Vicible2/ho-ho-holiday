@@ -12,11 +12,11 @@ $titlefont: 'Amatic SC', cursive;
 $contentfont: 'Open Sans Condensed', sans-serif;
 
 body{
-    padding: 30px;
+    padding: 100px 30px;
     background-color: $darkblue;
 }
 
-h1{
+h1,h2,h3,h4,h5{
     font-family: $titlefont;
     color: $silverblue;
 }
@@ -24,6 +24,20 @@ h1{
 p{
     font-family: $titlefont;
     color: $silverblue;
+}
+
+.navbar-brand{
+    padding-left: 30px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 25px;
+    color:#E1F2F7; 
+    font-size: 30px; 
+}
+
+.nav-link:hover{
+    transform: scale(1.1);
 }
 
 
