@@ -1,3 +1,5 @@
+//TODO: change the js for typewriting function
+
 // set up text to print, each item in array is new line
 var aText = new Array(
     "Zoom calls and game", 
@@ -52,3 +54,26 @@ var aText = new Array(
           snowflake.setAttribute('r', getRandom(1,3));
         }
       })();
+
+appearText = () =>{
+
+  let text = document.querySelector(".game-text");
+  let text2 = document.querySelector(".game-text-two")
+
+  let textLocation = text.getBoundingClientRect().top;
+  let text2Location = text2.getBoundingClientRect().top;
+
+  let screenPosition = window.innerHeight/1.3 ;
+
+  if(textLocation < screenPosition){
+    text.classList.add("game-text-appear");
+  } 
+  if (text2Location < screenPosition){
+    text2.classList.add("game-text-two-appear");
+  }
+
+
+  
+};
+window.addEventListener("scroll", appearText);
+
