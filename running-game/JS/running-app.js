@@ -6,7 +6,7 @@ let score;
 let highscore;
 let player;
 let gravity;
-let obstacles;
+let obstacles = [];
 let gameSpeed;
 let keys = {};
 
@@ -41,7 +41,7 @@ class Player {
         //Jump animation
         if (keys['Space'] || keys['KeyW']) {
             console.log('Jump');
-            this.Jump();
+            this.jump();
         } else {
             //Jumptimer: when pressing space you add force to player, if you hold it will add force if no jumptimer
             this.jumpTimer = 0;
@@ -67,9 +67,9 @@ class Player {
 
        
 
-        this.Draw();
+        this.draw();
     }
-    Jump() {
+    jump() {
         if (this.grounded && this.jumpTimer == 0) {
             this.jumpTimer = 1 ;
             this.dy = -this.jumpForce;
@@ -80,7 +80,7 @@ class Player {
     }
 
 
-    Draw() { //draw function to create basic rectangle that is the player (will be replace with pixelAvatar later)
+    draw() { //draw function to create basic rectangle that is the player (will be replace with pixelAvatar later)
         context.beginPath();
         context.fillStyle = this.c;
         context.fillRect(this.x, this.y, this.w, this.h);
@@ -88,8 +88,58 @@ class Player {
     }
 }
 
+class Obstacle {
+    constructor (x, y, w, h, c) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+        this.c = c;
+
+        //Velocity on x Axis in negative (left) direction
+        this.dx = -gameSpeed;
+    }
+
+    update () {
+        this.x += this.dx;
+        this.draw();
+        this.dx = -gameSpeed;
+    }
+
+    draw () {
+        context.beginPath();
+        context.fillStyle = this.c;
+        context.fillRect(this.x, this.y, this.w, this.h);
+        context.closePath();
+    }
+}
+
+
+//Game Functions
+spawnObstacle = () => {
+    let size = randomObstacleInt(20, 70);
+    //obstacleType 0 or 1, 0 = ground type, 1 is flying type
+    let type = randomObstacleInt(0, 1);
+    let obstacle = new Obstacle(canvas.width + size, canvas.height - size,
+        size, size, '#F5D3A0');
+
+        if (type == 1) {
+            obstacle.y -= player.originalHeight - 10;
+        }
+        obstacles.push(obstacle);
+
+} 
+
+
+
+randomObstacleInt = (min, max) => {
+    return Math.floor(Math.random() * (max - min) + min)
+}
+spawnObstacle();
+
+
 //initialize function so all variables are at default values.
-Start = () => {
+start = () => {
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -105,15 +155,31 @@ Start = () => {
 
     player = new Player(25, 0, 50, 50, '#001B3D');
 
-    requestAnimationFrame(Update);
+    requestAnimationFrame(update);
     // player.Draw(); call draw function to create rectangle
 }
 
-Update = () => {
-    requestAnimationFrame(Update); //once called (see Start function) we want to keep repeating this so it seems animated
+let initialSpawnTimer = 200;
+let spawnTimer = initialSpawnTimer;
+update = () => {
+    requestAnimationFrame(update); //once called (see Start function) we want to keep repeating this so it seems animated
     context.clearRect(0, 0, canvas.width, canvas.height); //if we don't clear our canvas every frame we will keep drawing the same over & over again
+
+
+    spawnTimer--;
+    if (spawnTimer <= 0) {
+        spawnObstacle();
+        console.log(obstacles);
+        spawnTimer = initialSpawnTimer - gameSpeed * 8;
+
+        if (spawnTimer < 60) {
+            spawnTimer = 60;
+        }
+
+    }
 
     player.Animate();
 
 }
-Start();
+
+start();
