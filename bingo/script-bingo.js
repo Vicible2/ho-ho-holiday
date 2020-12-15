@@ -1,4 +1,5 @@
-
+//TODO:flipping effect for computer card
+//TODO: animation before matching card disappear 
 
 
 
@@ -12,7 +13,7 @@ randomCard = () => {
     let randomCard = Math.floor(Math.random()*(12-1)+1);
 
     let cardLocation = document.querySelector("#computer-card");
-    
+
     //to show the computer card
     cardLocation.src= "./img/" + cards[randomCard] + ".png";
 
@@ -48,11 +49,33 @@ randomCard = () => {
  
 
   
-
 };
 
+//TODO: recall animation onclick 
+function flip() {
+    let cardLocation = document.getElementById("computer-card");
+    let degree = 360;
+    cardLocation.style.transform = "rotatey(" + degree + "deg)";
+    cardLocation.style.transitionDuration = "1s"
+
+
+
+ }
+ 
 
 pickCardBtn.addEventListener("click", randomCard);
+pickCardBtn.addEventListener("click", flip);
+
+
+
+
+    
+
+
+
+
+
+
 
 
 
