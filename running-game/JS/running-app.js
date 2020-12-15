@@ -8,7 +8,16 @@ let player;
 let gravity;
 let obstacles;
 let gameSpeed;
-let keys = [];
+let keys = {};
+
+//Event Listeners
+document.addEventListener('keydown', (event) => {
+    keys[event.code] = true;
+});
+document.addEventListener('keyup', (event) => {
+    keys[event.code] = false;
+});
+
 
 
 class Player {
@@ -24,30 +33,51 @@ class Player {
         this.jumpForce = 15;
         this.originalHeight = h; //reference for normal playerHeight (ducking wil have to reset after shrink)
         this.grounded = false;
+        this.jumpTimer = 0;
 
     }
 
-    Animate () {
-        //create gravity effect
+    Animate() {
+        //Jump animation
+        if (keys['Space'] || keys['KeyW']) {
+            console.log('Jump');
+            this.Jump();
+        } else {
+            //Jumptimer: when pressing space you add force to player, if you hold it will add force if no jumptimer
+            this.jumpTimer = 0;
+        }
 
-        if(this.y + this.height < canvas.height) {
+        //Gravity / drop character
+        if (this.y + this.h < canvas.height) {
             this.dy += gravity;
             this.grounded = false;
         } else {
             this.dy = 0;
             this.grounded = true;
-            this.y = canvas.height - this.height;
+            this.y = canvas.height - this.h;
         }
+
+        this.y += this.dy;
 
         this.Draw();
     }
+    Jump() {
+        if (this.grounded && this.jumpTimer == 0) {
+            this.jumpTimer = 1;
+            this.dy = -this.jumpForce;
+        } else if (this.jumpTimer > 0 && this.jumpTimer < 15) {
+            this.jumpTimer++;
+            this.dy = -this.jumpForce - (this.jumpTimer / 50);
+        }
+    }
 
-    Draw () { //draw function to create basic rectangle that is the player (will be replace with pixelAvatar later)
+
+    Draw() { //draw function to create basic rectangle that is the player (will be replace with pixelAvatar later)
         context.beginPath();
         context.fillStyle = this.c;
         context.fillRect(this.x, this.y, this.w, this.h);
         context.closePath();
-        }
+    }
 }
 
 //initialize function so all variables are at default values.
@@ -65,10 +95,10 @@ Start = () => {
     highscore = 0;
 
 
-    player = new Player (25, canvas.height - 150, 50, 50, '#001B3D');
+    player = new Player(25, 0, 50, 50, '#001B3D');
 
     requestAnimationFrame(Update);
-   // player.Draw(); call draw function to create rectangle
+    // player.Draw(); call draw function to create rectangle
 }
 
 Update = () => {
