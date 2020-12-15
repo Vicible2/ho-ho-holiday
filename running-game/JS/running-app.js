@@ -12,6 +12,8 @@ let obstacles = [];
 let gameSpeed;
 let keys = {};
 
+let character = new Image(src);
+
 //Event Listeners
 document.addEventListener('keydown', (event) => {
     keys[event.code] = true;
@@ -83,10 +85,12 @@ class Player {
 
 
     draw() { //draw function to create basic rectangle that is the player (will be replace with pixelAvatar later)
-        context.beginPath();
+        /*context.beginPath();
         context.fillStyle = this.c;
         context.fillRect(this.x, this.y, this.w, this.h);
-        context.closePath();
+        context.closePath(); */
+        context.drawImage(character, 0, 0, canvas.width, canvas.height);
+        
     }
 }
 
