@@ -3,7 +3,9 @@ const context = canvas.getContext('2d');
 
 //Variables
 let score;
+let scoreText;
 let highscore;
+let highscoreText;
 let player;
 let gravity;
 let obstacles = [];
@@ -47,7 +49,7 @@ class Player {
             this.jumpTimer = 0;
         }
 
-        if(keys['ShiftLeft'] || keys['KeyS']) {
+        if (keys['ShiftLeft'] || keys['KeyS']) {
             this.h = this.originalHeight / 2;
         } else {
             this.h = this.originalHeight;
@@ -65,13 +67,13 @@ class Player {
             this.y = canvas.height - this.h;
         }
 
-       
+
 
         this.draw();
     }
     jump() {
         if (this.grounded && this.jumpTimer == 0) {
-            this.jumpTimer = 1 ;
+            this.jumpTimer = 1;
             this.dy = -this.jumpForce;
         } else if (this.jumpTimer > 0 && this.jumpTimer < 30) {
             this.jumpTimer++;
@@ -89,7 +91,7 @@ class Player {
 }
 
 class Obstacle {
-    constructor (x, y, w, h, c) {
+    constructor(x, y, w, h, c) {
         this.x = x;
         this.y = y;
         this.w = w;
@@ -100,13 +102,13 @@ class Obstacle {
         this.dx = -gameSpeed;
     }
 
-    update () {
+    update() {
         this.x += this.dx;
         this.draw();
         this.dx = -gameSpeed;
     }
 
-    draw () {
+    draw() {
         context.beginPath();
         context.fillStyle = this.c;
         context.fillRect(this.x, this.y, this.w, this.h);
@@ -114,7 +116,27 @@ class Obstacle {
     }
 }
 
+class Text {
+    constructor(t, x, y, a, c, s, ) {
 
+        this.t = t;
+        this.x = x;
+        this.y = y;
+        this.a = a;
+        this.c = c;
+        this.s = s;
+
+    }
+
+    draw() {
+        context.beginPath();
+        context.fillStyle = this.c;
+        context.font = this.s + "px sans-serif";
+        context.textAlign = this.a;
+        context.fillText(this.t, this.x, this.y);
+        context.closePath();
+    }
+}
 //Game Functions
 spawnObstacle = () => {
     let size = randomObstacleInt(20, 70);
@@ -123,12 +145,12 @@ spawnObstacle = () => {
     let obstacle = new Obstacle(canvas.width + size, canvas.height - size,
         size, size, '#F5D3A0');
 
-        if (type == 1) {
-            obstacle.y -= player.originalHeight - 10;
-        }
-        obstacles.push(obstacle);
+    if (type == 1) {
+        obstacle.y -= player.originalHeight - 10;
+    }
+    obstacles.push(obstacle);
 
-} 
+}
 
 
 
@@ -152,8 +174,17 @@ start = () => {
     score = 0;
     highscore = 0;
 
+    //remembers our highscore from localStorage when refreshing the page
+    if (localStorage.getItem('highscore')) {
+        highscore = localStorage.getItem('highscore');
+    }
+
 
     player = new Player(25, 0, 50, 50, '#001B3D');
+
+
+    scoreText = new Text("Score: " + score, 25, 25, "left", "#001B3D", "20");
+    highscoreText = new Text("Highscore: " + highscore, canvas.width - 25, 25, "right", "001B3D", "20");
 
     requestAnimationFrame(update);
     // player.Draw(); call draw function to create rectangle
@@ -182,12 +213,45 @@ update = () => {
     for (let i = 0; i < obstacles.length; i++) {
         let o = obstacles[i];
 
+        //delete obstacles that have passed to not slow down computer over time
+        if (o.x + o.w < 0) {
+            obstacles.splice(i, 1);
+        }
 
-        o.update();
+        if (
+            player.x < o.x + o.w &&
+            player.x + player.w > o.x &&
+            player.y < o.y + o.h &&
+            player.y + player.h > o.y
+            ) {
+                obstacles = [];
+                score = 0;
+                spawnTimer = initialSpawnTimer;
+                gameSpeed = 2;
+
+                window.localStorage.setItem('highscore', highscore);
+            }
+
+
+
+            o.update();
     }
 
     player.Animate();
 
+    score++;
+    scoreText.t = "Score: " + score;
+    scoreText.draw();
+
+    if(score > highscore) {
+        highscore = score;
+        highscoreText.t = "Higscore: " + highscore;
+       
+    }
+
+    highscoreText.draw();
+
+    gameSpeed += 0.0002;
 }
 
 start();
