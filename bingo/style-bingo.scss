@@ -26,6 +26,22 @@ button{
     display: flex;
     flex-direction: column;
 }
+     
+@keyframes spinner {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-720deg);
+    }
+  }
+
+
+.run-animation {
+  position: relative;
+  animation: spinner 2s ease;
+}
+
 .container{
     display: grid;
     grid-template-columns: 40% 60%;

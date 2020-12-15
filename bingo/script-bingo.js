@@ -1,9 +1,10 @@
-//TODO:flipping effect for computer card
 //TODO: animation before matching card disappear 
+//TODO: set time out for changing card of computer
 
 
 
 let pickCardBtn = document.querySelector("#get-card-btn");
+let cardLocation = document.querySelector("#computer-card-image");
 
 
 randomCard = () => {
@@ -12,15 +13,18 @@ randomCard = () => {
 
     let randomCard = Math.floor(Math.random()*(12-1)+1);
 
-    let cardLocation = document.querySelector("#computer-card");
-
+    cardLocation.src = "./img/10.png";
     //to show the computer card
-    cardLocation.src= "./img/" + cards[randomCard] + ".png";
+    setTimeout(() => {
+        cardLocation.src= "./img/" + cards[randomCard] + ".png";
+    }, 850);
+    
 
     console.log(cards[randomCard]);
    
     //to make the cards disappear
     if(randomCard == 0){
+        
         document.querySelector("#pc1").src = "";
     }  else if(randomCard == 1){
         document.querySelector("#pc2").src = "";
@@ -51,20 +55,35 @@ randomCard = () => {
   
 };
 
-//TODO: recall animation onclick 
-function flip() {
-    let cardLocation = document.getElementById("computer-card");
-    let degree = 360;
-    cardLocation.style.transform = "rotatey(" + degree + "deg)";
-    cardLocation.style.transitionDuration = "1s"
-
-
-
- }
- 
 
 pickCardBtn.addEventListener("click", randomCard);
-pickCardBtn.addEventListener("click", flip);
+
+
+ 
+"use strict";
+
+
+pickCardBtn.addEventListener("click", (e)=>{
+  e.preventDefault;
+  
+  // -> removing the class
+  cardLocation.classList.remove("run-animation");
+  
+  // -> triggering reflow /* The actual magic */
+  // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+  // This was, from the original tutorial, will no work in strict mode. Thanks Felis Phasma! The next uncommented line is the fix.
+  // element.offsetWidth = element.offsetWidth;
+  
+  void cardLocation.offsetWidth;
+  
+  // -> and re-adding the class
+  cardLocation.classList.add("run-animation");
+}, false);
+
+
+
+
+
 
 
 

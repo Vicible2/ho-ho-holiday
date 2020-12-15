@@ -61,6 +61,34 @@ button h3 {
           flex-direction: column;
 }
 
+@-webkit-keyframes spinner {
+  from {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(-720deg);
+            transform: rotateY(-720deg);
+  }
+}
+
+@keyframes spinner {
+  from {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(-720deg);
+            transform: rotateY(-720deg);
+  }
+}
+
+.run-animation {
+  position: relative;
+  -webkit-animation: spinner 2s ease;
+          animation: spinner 2s ease;
+}
+
 .container {
   display: -ms-grid;
   display: grid;
