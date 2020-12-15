@@ -73,7 +73,7 @@ class Player {
         if (this.grounded && this.jumpTimer == 0) {
             this.jumpTimer = 1 ;
             this.dy = -this.jumpForce;
-        } else if (this.jumpTimer > 0 && this.jumpTimer < 17) {
+        } else if (this.jumpTimer > 0 && this.jumpTimer < 30) {
             this.jumpTimer++;
             this.dy = -this.jumpForce - (this.jumpTimer / 50);
         }
@@ -146,7 +146,7 @@ start = () => {
 
     context.font = "20px sans-serif";
 
-    gameSpeed = 3;
+    gameSpeed = 2;
     gravity = 1;
 
     score = 0;
@@ -176,6 +176,14 @@ update = () => {
             spawnTimer = 60;
         }
 
+    }
+
+    //Spawn Enemies
+    for (let i = 0; i < obstacles.length; i++) {
+        let o = obstacles[i];
+
+
+        o.update();
     }
 
     player.Animate();
