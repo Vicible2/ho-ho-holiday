@@ -183,7 +183,7 @@ start = () => {
     }
 
 
-    player = new Player(25, 0, 50, 50, '#D33943');
+    player = new Player(350, 0, 50, 50, '#D33943');
 
 
     scoreText = new Text("Score: " + score, 25, 25, "left", "#E1F2F7", "20");
