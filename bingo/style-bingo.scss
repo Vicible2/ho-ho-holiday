@@ -1,53 +1,51 @@
 @import "../common-css/style-common.scss";
 
-//TODO: finish the card of player
 
-img{
-    width: 300px;
-}
 
 button{
-    background-color: $lightblue;
-    width: 100px;
-    border: none;
-    padding: 20px 20px;
-    // text-align: center;
+    border: 2px solid $lightblue;
+    outline: none;
+    background: transparent;
+    width: 200px;
+    height: 60px;
+    padding: 10px 20px;
     text-decoration: none;
-    // display: inline-block;
-    border-radius: 5px;
+    border-radius: 8px;
+    justify-self: center;
     h3{
-        color: $darkblue;
+        color: $silverblue;
         font-size: 30px;
         font-weight: 800;
         text-align: center;
-    
     }
 }
-
-.computer-card{
-    display: flex;
-    flex-direction: column;
-}
-     
-
-
 
 .container{
     display: grid;
     grid-template-columns: 30% 70%;
-
 }
+
+.computer-card{
+    display: grid;
+    grid-template-rows: 70% 30%;
+    padding: 30px;
+    justify-self: center;
+    img{
+        padding-top: 100px;
+        width: 300px;
+    }
+}
+
 .player-card{
     background-color: $medblue;
     width: 910px;
     padding-bottom: 5px;
-
 }
+
 .card-title{
-margin: 0;  
-display: Flex;
-justify-content: space-evenly;
-    
+    margin: 0;  
+    display: Flex;
+    justify-content: space-evenly;
     img{
         width: 80px;
         padding: 5px 0;
@@ -59,8 +57,6 @@ justify-content: space-evenly;
     }
 }
 
-
-
 .card{
     border-radius: 5px;
     background-color: $silverblue;
@@ -68,7 +64,6 @@ justify-content: space-evenly;
     height: 680px;
     margin:auto;
     display: grid;
-
     grid-template-columns: repeat(4, 25%);
     justify-items: center;
     padding: 10px;
@@ -77,7 +72,6 @@ justify-content: space-evenly;
         justify-self: center;
         padding: 5px;
     }
-
 }
 
 // animation class(will be add by javascript)
