@@ -150,7 +150,7 @@ a{
 }
 .game-text{
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
     transition: 0.6s all ease-in-out;
 
     justify-self: center;
@@ -238,3 +238,115 @@ a{
     grid-column: 3/4;
 }
 
+/* gift generator start */
+#game-three{
+    height: 90vh;
+    width: 100%;
+    background-color: #E1F2F7;
+    border-radius: 30px 30px 0 0;
+    display: grid;
+    padding: 100px;
+    margin: auto;
+    
+    grid-template-columns:40% 50% 10%;
+    grid-template-rows: 30% 70%;   
+}
+#game-three h3, #game-three p{
+    color: #001B3D;
+    padding: 30px;
+}
+#game-three h3{
+    font-size: 40px;
+    font-weight: 700; 
+}
+#game-three img{
+    justify-self: center;
+}
+.game-text-three{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s all ease-in-out;
+
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/3; 
+}
+.game-text-three-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.link-game-three{
+    border: 1px solid #001B3D;
+    padding: 5px 10px;
+}
+.game-small-icon-three{
+    width: 80px;
+    align-self: end;
+    grid-column: 3/4;
+}
+.game-image-three{
+    width: 300px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+/* bingo start here */
+
+#game-four{
+    height: 100vh;
+    width: 100%;
+    background-color: #F5D3A0;
+    border-radius: 30px 30px 0 0;
+    display: grid;
+    padding: 15%;
+    margin: auto;
+    padding: 100px;
+    grid-template-columns:10% 50% 40%;
+    grid-template-rows: 30% 70%;   
+}
+#game-four h3, #game-four p{
+    color: #001B3D;
+    padding: 30px;
+}
+#game-four h3{
+    font-size: 40px;
+    font-weight: 700; 
+}
+#game-four img{
+    justify-self: center;
+}
+.game-text-four{
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s all ease-in-out;
+    
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/3; 
+}
+
+.game-text-four-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.link-game-four{
+    border: 1px solid #001B3D;
+    padding: 5px 10px;
+}
+.game-small-icon-four{
+    width: 80px;
+    align-self: end;
+    
+}
+.game-image-four{
+    width: 300px;
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
