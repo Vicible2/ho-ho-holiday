@@ -156,7 +156,7 @@ spawnObstacle = () => {
 }
 
 
-
+//RandomInteger to define obstacle size & type
 randomObstacleInt = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min)
 }
