@@ -23,7 +23,23 @@ class Player {
         this.dy = 0; //direction y-Force
         this.jumpForce = 15;
         this.originalHeight = h; //reference for normal playerHeight (ducking wil have to reset after shrink)
+        this.grounded = false;
 
+    }
+
+    Animate () {
+        //create gravity effect
+
+        if(this.y + this.height < canvas.height) {
+            this.dy += gravity;
+            this.grounded = false;
+        } else {
+            this.dy = 0;
+            this.grounded = true;
+            this.y = canvas.height - this.height;
+        }
+
+        this.Draw();
     }
 
     Draw () { //draw function to create basic rectangle that is the player (will be replace with pixelAvatar later)
@@ -59,7 +75,7 @@ Update = () => {
     requestAnimationFrame(Update); //once called (see Start function) we want to keep repeating this so it seems animated
     context.clearRect(0, 0, canvas.width, canvas.height); //if we don't clear our canvas every frame we will keep drawing the same over & over again
 
-    player.Draw();
+    player.Animate();
 
 }
 Start();
