@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+body {
+  padding: 100px 30px;
+  background-color: #001B3D;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Amatic SC", cursive;
+  color: #E1F2F7;
+}
+
+p {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #E1F2F7;
+  margin: 0;
+}
+
+.navbar-brand {
+  padding-left: 30px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 10px;
+  color: #E1F2F7;
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+img {
+  width: 300px;
+}
+
+button {
+  background-color: #D8E8FD;
+  width: 100px;
+  border: none;
+  padding: 20px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+button h3 {
+  color: #001B3D;
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.computer-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+}
+
+.card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (200px)[4];
+      grid-template-columns: repeat(4, 200px);
+}
+
+.card img {
+  width: 100%;
+}
+/*# sourceMappingURL=style-bingo.css.map */

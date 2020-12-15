@@ -1,0 +1,45 @@
+@import "../common-css/style-common.scss";
+
+img{
+    width: 300px;
+}
+
+button{
+    background-color: $lightblue;
+    width: 100px;
+    border: none;
+    padding: 20px 20px;
+    // text-align: center;
+    text-decoration: none;
+    // display: inline-block;
+    border-radius: 5px;
+    h3{
+        color: $darkblue;
+        font-size: 30px;
+        font-weight: 800;
+        text-align: center;
+        
+
+
+    }
+}
+
+.computer-card{
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+}
+
+.card{
+    display: grid;
+
+    grid-template-columns: repeat(4, 200px);
+    img{
+        width: 100%;
+    }
+
+}
