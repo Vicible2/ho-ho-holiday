@@ -5,9 +5,39 @@
           box-sizing: border-box;
 }
 
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
 #gameContainer {
   height: 80vh;
   width: 85vw;
-  background-color: yellow;
+  background-color: #001B3D;
+  background-image: url(../assets/bg.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+.tiles {
+  width: 85vw;
+  height: 4vh;
+  background-color: black;
+  background-image: url(../assets/snowtile.png);
+  background-size: 2vw;
+  background-position: left top;
 }
 /*# sourceMappingURL=running-style.css.map */

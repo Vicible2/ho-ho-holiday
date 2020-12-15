@@ -188,7 +188,7 @@ start = () => {
 
 
     scoreText = new Text("Score: " + score, 25, 25, "left", "#001B3D", "20");
-    highscoreText = new Text("Highscore: " + highscore, canvas.width - 25, 25, "right", "001B3D", "20");
+    highscoreText = new Text("Highscore: " + highscore, canvas.width - 25, 25, "right", "#001B3D", "20");
 
     requestAnimationFrame(update);
     // player.Draw(); call draw function to create rectangle
