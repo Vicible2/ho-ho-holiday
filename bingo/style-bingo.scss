@@ -1,5 +1,7 @@
 @import "../common-css/style-common.scss";
 
+//TODO: finish the card of player
+
 img{
     width: 300px;
 }
@@ -27,33 +29,82 @@ button{
     flex-direction: column;
 }
      
-@keyframes spinner {
-    from {
-      transform: rotateY(0deg);
-    }
-    to {
-      transform: rotateY(-720deg);
-    }
-  }
 
+
+
+.container{
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+}
+.player-card{
+    background-color: $medblue;
+    width: 910px;
+    padding-bottom: 5px;
+
+}
+.card-title{
+margin: 0;  
+display: Flex;
+justify-content: space-evenly;
+    
+    img{
+        width: 80px;
+        padding: 5px 0;
+    }
+    h2{
+        color: $darkblue;
+        font-size: 80px;
+        font-weight: 800;
+    }
+}
+
+
+
+.card{
+    border-radius: 5px;
+    background-color: $silverblue;
+    width: 900px;
+    height: 680px;
+    margin:auto;
+    display: grid;
+
+    grid-template-columns: repeat(4, 25%);
+    justify-items: center;
+    padding: 10px;
+    img{
+        width: 100%;
+        justify-self: center;
+        padding: 5px;
+    }
+
+}
+
+// animation class(will be add by javascript)
+.run-pumping {
+    animation: pumping 2.5s alternate 2 ease-in;
+}
 
 .run-animation {
   position: relative;
   animation: spinner 2s ease;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: 40% 60%;
-
+@keyframes spinner {
+    0% {transform: rotateY(0deg);}
+    20% {opacity: .7;}
+    40% {opacity: .5;}
+    60% {opacity: .5;}
+    80% {opacity: .7;}
+    100% {opacity: 1;
+      transform: rotateY(-720deg);}
 }
 
-.card{
-    display: grid;
-
-    grid-template-columns: repeat(4, 200px);
-    img{
-        width: 100%;
-    }
-
+@keyframes pumping {
+    0%   {transform: scale(.7);}
+    20% {transform: scale(1.2);}
+    40% {transform: scale(.7);}
+    60% {transform: scale(1.2);}
+    80% {transform: scale(.7);}
+    100% {transform: scale(.3);}
 }
