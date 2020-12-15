@@ -1,4 +1,4 @@
-let nameLists=[];
+let nameLists=["selin","bert","luisa","mike"];
 let inputNames=document.getElementById("names");
 
 document.getElementById("submit").addEventListener("click", (event) => {
@@ -6,10 +6,18 @@ document.getElementById("submit").addEventListener("click", (event) => {
 
     nameLists.push(inputNames.value);
     
-    console.log(nameLists);
 
 
 
 });
+
+document.getElementById("result").addEventListener("click", () => {
+
+ document.getElementById("inputpeople").style.display="none";
+
+
+});
+
+
 
     
