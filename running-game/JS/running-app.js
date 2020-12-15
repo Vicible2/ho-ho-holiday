@@ -146,8 +146,7 @@ spawnObstacle = () => {
     let size = randomObstacleInt(20, 70);
     //obstacleType 0 or 1, 0 = ground type, 1 is flying type
     let type = randomObstacleInt(0, 1);
-    let obstacle = new Obstacle(canvas.width + size, canvas.height - size,
-        size, size, '#F5D3A0');
+    let obstacle = new Obstacle(canvas.width + size, canvas.height - size, size, size, '#58B69B');
 
     if (type == 1) {
         obstacle.y -= player.originalHeight - 10;
@@ -184,11 +183,11 @@ start = () => {
     }
 
 
-    player = new Player(25, 0, 50, 50, '#001B3D');
+    player = new Player(25, 0, 50, 50, '#D33943');
 
 
-    scoreText = new Text("Score: " + score, 25, 25, "left", "#001B3D", "20");
-    highscoreText = new Text("Highscore: " + highscore, canvas.width - 25, 25, "right", "#001B3D", "20");
+    scoreText = new Text("Score: " + score, 25, 25, "left", "#E1F2F7", "20");
+    highscoreText = new Text("Highscore: " + highscore, canvas.width - 25, 25, "right", "#E1F2F7", "20");
 
     requestAnimationFrame(update);
     // player.Draw(); call draw function to create rectangle
