@@ -47,6 +47,12 @@ class Player {
             this.jumpTimer = 0;
         }
 
+        if(keys['ShiftLeft'] || keys['KeyS']) {
+            this.h = this.originalHeight / 2;
+        } else {
+            this.h = this.originalHeight;
+        }
+
         this.y += this.dy; //needs to be ABOVE gravity, as gravity will check
 
         //Gravity / drop character
