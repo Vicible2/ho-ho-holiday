@@ -4,4 +4,9 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+#gameContainer {
+  height: 500px;
+  width: 700px;
+}
 /*# sourceMappingURL=running-style.css.map */
