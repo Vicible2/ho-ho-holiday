@@ -47,6 +47,8 @@ class Player {
             this.jumpTimer = 0;
         }
 
+        this.y += this.dy; //needs to be ABOVE gravity, as gravity will check
+
         //Gravity / drop character
         if (this.y + this.h < canvas.height) {
             this.dy += gravity;
@@ -57,15 +59,15 @@ class Player {
             this.y = canvas.height - this.h;
         }
 
-        this.y += this.dy;
+       
 
         this.Draw();
     }
     Jump() {
         if (this.grounded && this.jumpTimer == 0) {
-            this.jumpTimer = 1;
+            this.jumpTimer = 1 ;
             this.dy = -this.jumpForce;
-        } else if (this.jumpTimer > 0 && this.jumpTimer < 15) {
+        } else if (this.jumpTimer > 0 && this.jumpTimer < 17) {
             this.jumpTimer++;
             this.dy = -this.jumpForce - (this.jumpTimer / 50);
         }
