@@ -20,7 +20,7 @@ class Player {
         this.h = h;
         this.c = c;
 
-        this.dy = 0; //direction y Force
+        this.dy = 0; //direction y-Force
         this.jumpForce = 15;
         this.originalHeight = h; //reference for normal playerHeight (ducking wil have to reset after shrink)
 
@@ -49,6 +49,17 @@ Start = () => {
     highscore = 0;
 
 
-    player = new Player (25, canvas.height - 150, 50, 50, 'black');
-    player.Draw();
+    player = new Player (25, canvas.height - 150, 50, 50, '#001B3D');
+
+    requestAnimationFrame(Update);
+   // player.Draw(); call draw function to create rectangle
 }
+
+Update = () => {
+    requestAnimationFrame(Update); //once called (see Start function) we want to keep repeating this so it seems animated
+    context.clearRect(0, 0, canvas.width, canvas.height); //if we don't clear our canvas every frame we will keep drawing the same over & over again
+
+    player.Draw();
+
+}
+Start();
