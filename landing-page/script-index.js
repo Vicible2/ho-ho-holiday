@@ -59,15 +59,9 @@ appearText = () =>{
 
   let text = document.querySelector(".game-text");
   let text2 = document.querySelector(".game-text-two")
-  let text3 = document.querySelector(".game-text-three")
-  let text4 = document.querySelector(".game-text-four")
-  
 
   let textLocation = text.getBoundingClientRect().top;
   let text2Location = text2.getBoundingClientRect().top;
-  let text3Location = text3.getBoundingClientRect().top;
-  let text4Location = text4.getBoundingClientRect().top;
-
 
   let screenPosition = window.innerHeight/1.3 ;
 
@@ -77,14 +71,7 @@ appearText = () =>{
   if (text2Location < screenPosition){
     text2.classList.add("game-text-two-appear");
   }
-  if(text3Location < screenPosition){
-    text3.classList.add("game-text-three-appear");
 
-  }
-  if(text4Location < screenPosition){
-    text4.classList.add("game-text-four-appear");
-
-  }
 
   
 };
