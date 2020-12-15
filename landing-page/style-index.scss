@@ -1,0 +1,362 @@
+@import "../common-css/style-common.scss";
+
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font-size: 50px;
+}
+p{
+    font-size: 25px;
+}
+i{
+    font-size: 35px;
+}
+a{
+    text-decoration: none;
+    
+}
+
+/* snow effect start */
+.svg-snowscene {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+  }
+  .snow {
+    fill: #fff; 
+    animation-name: snowing;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+  }
+  .snow:nth-child(2n){
+      animation-delay: 1.5s;
+    }
+.snow:nth-child(3n){
+      animation-delay: 2.3s;
+      animation-duration: 3.3s;
+    }
+    .snow:nth-child(4n){
+      animation-delay: 0.8s;
+      animation-duration: 3.2s;
+    }
+    .snow:nth-child(5n){
+      animation-delay: 2.8s;
+    }
+  
+  
+  @keyframes snowing {
+    0%{ fill-opacity: 1; }
+    100% { 
+      fill-opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+
+/* landing page start */
+
+.landingsection{  
+    height: 95vh;
+    display: grid;
+    width: 70%;
+    margin: auto;
+    padding-top: 120px;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    grid-template-rows:90%; 
+}
+
+.landingsection img{
+    width: 300px;
+    justify-self: center;
+    align-self: center;
+    transform: rotate(10deg);
+}
+
+.landingsection-text{
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+.landingsection i{
+    color: #E1F2F7;
+}
+
+.landingsection p{
+    padding: 30px;
+}
+.landingsection a{
+    z-index: 1;
+    position: absolute;
+}
+
+.christ{
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.cross{
+    position: relative;
+  }
+.cross::after{
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 8px;
+    width: 100%;
+    height: 5px;
+    background: #E1F2F7;
+    animation: strike 3s 1;
+}
+
+@keyframes strike{
+    0%   { width : 0; }
+    100% { width: 100%; }
+  }
+
+
+/* DRAG & DROP GAME start here */
+
+#game{
+    height: 90vh;
+    width: 70%;
+    background-color: $darkblue;
+    border-radius: 30px 30px 0 0;
+    display: grid;
+    padding: 100px;
+    margin: auto;
+    grid-gap:20px;
+    grid-template-columns:40% 50% 10%;
+    grid-template-rows: 10% 90%;   
+ 
+}
+#game h3, #game p{
+    color: $silverblue;
+    padding: 30px;
+}
+#game h3{
+    font-size: 40px;
+    font-weight: 700; 
+}
+#game img{
+    justify-self: center;
+}
+.game-text{
+
+
+    opacity: 1;
+    transform: translateY(30px);
+    transition: 0.6s all ease-in-out;
+    padding-left: 40px;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/3; 
+}
+
+.game-text-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.link-game{
+    border: 1px solid $silverblue;
+    padding: 5px 10px;
+}
+.game-small-icon{
+    width: 80px;
+    align-self: end;
+    grid-column: 3/4;
+}
+.game-image{
+    width: 300px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+
+
+/* running game start */
+
+#game-two{
+    height: 100vh;
+    width: 70%;
+    background-color: $medblue;
+    border-radius: 30px 30px 0 0;
+    display: grid;
+    padding: 15%;
+    margin: auto;
+    padding: 100px;
+    grid-template-columns:10% 50% 40%;
+    grid-template-rows: 10% 90%;   
+}
+#game-two h3, #game-two p{
+    color: #001B3D;
+    padding: 30px;
+}
+#game-two h3{
+    font-size: 40px;
+    font-weight: 700; 
+}
+#game-two img{
+    justify-self: center;
+}
+.game-text-two{
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s all ease-in-out;
+    padding-right: 40px;
+
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/3; 
+}
+
+.game-text-two-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.link-game-two{
+    border: 1px solid #001B3D;
+    padding: 5px 10px;
+}
+.game-small-icon-two{
+    width: 80px;
+    align-self: end;
+    
+}
+.game-image-two{
+    width: 300px;
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+
+/* gift generator start here */
+
+#game-three{
+    height: 90vh;
+    width: 70%;
+    background-color: $darkblue;
+    border-radius: 30px 30px 0 0;
+    display: grid;
+    padding: 100px;
+    margin: auto;
+    
+    grid-template-columns:40% 50% 10%;
+    grid-template-rows: 10% 90%;   
+}
+#game-three h3, #game-three p{
+    color: $silverblue;
+    padding: 30px;
+}
+#game-three h3{
+    font-size: 40px;
+    font-weight: 700; 
+}
+#game-three img{
+    justify-self: center;
+}
+.game-text-three{
+
+    opacity: 1;
+    transform: translateY(30px);
+    transition: 0.6s all ease-in-out;
+    padding-left: 40px;
+
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/3; 
+}
+.game-text-three-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.link-game-three{
+    border: 1px solid $silverblue;
+    padding: 5px 10px;
+}
+.game-small-icon-three{
+    width: 80px;
+    align-self: end;
+    grid-column: 3/4;
+}
+.game-image-three{
+    width: 300px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+
+
+
+
+/* bingo start */
+
+#game-four{
+    height: 100vh;
+    width: 70%;
+    background-color: $medblue;
+    border-radius: 30px 30px 0 0;
+    display: grid;
+    padding: 15%;
+    margin: auto;
+    padding: 100px;
+    grid-template-columns:10% 50% 40%;
+    grid-template-rows: 10% 90%;   
+}
+#game-four h3, #game-four p{
+    color: #001B3D;
+    padding: 30px;
+}
+#game-four h3{
+    font-size: 40px;
+    font-weight: 700; 
+}
+#game-four img{
+    justify-self: center;
+}
+.game-text-four{
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s all ease-in-out;
+    padding-right: 40px;
+
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/3; 
+}
+
+.game-text-four-appear{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.link-game-four{
+    border: 1px solid #001B3D;
+    padding: 5px 10px;
+}
+.game-small-icon-four{
+    width: 80px;
+    align-self: end;
+    
+}
+.game-image-four{
+    width: 300px;
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+
