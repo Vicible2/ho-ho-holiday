@@ -257,4 +257,9 @@ update = () => {
     gameSpeed += 0.0002;
 }
 
+window.addEventListener('resize', () => {
+    canvas.height = windows.innerHeight;
+    canvas.width = windows.innerWidth;
+})
+
 start();
