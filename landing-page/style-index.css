@@ -144,11 +144,8 @@ a {
   display: grid;
   width: 70%;
   margin: auto;
-  padding-top: 120px;
-  -ms-grid-columns: (minmax(50%, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-  -ms-grid-rows: 90%;
-      grid-template-rows: 90%;
+  -ms-grid-columns: 80% 20%;
+      grid-template-columns: 80% 20%;
 }
 
 .landingsection img {
