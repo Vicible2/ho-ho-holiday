@@ -20,6 +20,7 @@ document.getElementById("result").addEventListener("click", () => {
 
  document.getElementById("inputpeople").style.display="none";
  document.getElementById("outputText").innerHTML=nameLists;
+
  
 
 let pair = function(letsPairUp) {
@@ -28,17 +29,20 @@ let pair = function(letsPairUp) {
     let recipients = letsPairUp.slice();
 
     for (let i = 0; i < letsPairUp.length; i++) {
+
         let sender = letsPairUp[i];		
         let recipientIndex = Math.floor(Math.random() * recipients.length);
+        console.log(recipientIndex);
 
-    while (recipients[recipientIndex] === sender) {
-     // Can't send gift to myself
-    recipientIndex = Math.floor(Math.random() * recipients.length);
-    }
+        while (recipients[recipientIndex] === sender) {
+        // Can't send gift to myself
+        recipientIndex = Math.floor(Math.random() * recipients.length);
+        }
 
-    let recipient = recipients.splice(recipientIndex, 1)[0];
-    pairs.push({sender: sender,receiver: recipient});
+        let recipient = recipients.splice(recipientIndex, 1)[0];
+        pairs.push({sender: sender,receiver: recipient});
     }
+    document.getElementById("yourpair").innerHTML=pairs;
 
     return pairs;
     };
@@ -49,6 +53,7 @@ console.log(pair(nameLists));
 
 });
 //TODO: pairing all the names -->random method
+
 
 
 
