@@ -53,6 +53,7 @@ p {
 
 main {
   padding-top: 100px;
+  height: 68vh;
 }
 
 button {
@@ -96,8 +97,36 @@ button h3 {
 }
 
 .computer-card img {
-  padding-top: 100px;
-  width: 250px;
+  width: 200px;
+}
+
+.replay-btn-div {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  padding: 0;
+  opacity: .9;
+}
+
+#replay {
+  position: absolute;
+  top: 40%;
+  border: 2px solid #F5D3A0;
+  height: 300px;
+  width: 300px;
+  background-color: #F5D3A0;
+  border-radius: 50%;
+  right: 40%;
+  z-index: 1;
+  outline: none;
+}
+
+#replay h1 {
+  color: #001B3D;
+  font-size: 80px;
+  font-weight: 800;
+  padding: 10px;
 }
 
 .player-card {
@@ -105,6 +134,7 @@ button h3 {
   width: 80%;
   margin: auto;
   padding: 5px;
+  z-index: -1;
 }
 
 .card-title {
@@ -144,6 +174,12 @@ button h3 {
   -ms-grid-column-align: center;
       justify-self: center;
   padding: 5px;
+}
+
+.card * {
+  height: 116px;
+  width: 116px;
+  background-color: #E1F2F7;
 }
 
 .run-pumping {

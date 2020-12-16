@@ -18,15 +18,16 @@
   <!-- navbar start -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#" style="color:#E1F2F7;">
-        <h2><b>HO-HO-HOLIDAY</b></h2></a>
+      <a class="navbar-brand" href="#">
+        <img src="/landing-page/img/icon 1.png" alt="icon" width="36" height="30" class="d-inline-block align-top">
+        <h2 class="d-inline-block align-top>Ho Ho Holiday" style="font-weight: 700;">Ho Ho Holiday</h2>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
           <li class="nav-item">
-            <!-- TODO: to change the active below accordingly -->
             <a class="nav-link" aria-current="page" href="../index.html"><p>Home</p></a>
           </li>
           <li class="nav-item ">
@@ -36,7 +37,7 @@
             <a class="nav-link" href="../running-game/running.html"><p>Running Game</p></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><p>Gift Idea Generator</p></a>
+            <a class="nav-link" href="../gift-generator/gitf-index.html"><p>Gift Idea Generator</p></a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="#"><p>Bingo</p></a>
@@ -48,35 +49,78 @@
   <!-- end of navbar -->
 
   <!-- bingo start here -->
+
+  <audio id="winning-audio">
+    <source src="img/win.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="losing-audio">
+    <source src="img/lose.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="replay-btn-div">
+    <button id="replay"><h1>TRY AGAIN?</h1></button>
+  </div>
+
   <div class="container">
+
+
+
       <div class="computer-card">
           <img src="./img/snowflake.png" id="computer-card-image" alt="random_card">
           <button id="get-card-btn"><h3>GET A CARD</h3></button>
+
+          <h4>Remining draws:  <span id="remaining-draw">20</span></h4>
       </div>
 
       <div class="player-card">
           <div class="card-title">
               <!-- <img src="./img/lights.png" alt=""> -->
               <!-- <img src="./img/lights.png" alt=""> -->
-              <img src="./img/lights.png" alt="">
+              <!-- <img src="./img/lights.png" alt=""> -->
               <h2>Christmas Bingo</h2>
               <!-- <img src="./img/lights.png" alt=""> -->
               <!-- <img src="./img/lights.png" alt=""> -->
-              <img src="./img/lights.png" alt="">
+              <!-- <img src="./img/lights.png" alt=""> -->
           </div>
           <div class="card">
-            <img id="pc1" src="./img/1.png">
+            <div class="card-div1">
+              <img id="pc1" src="./img/1.png">
+            </div>
+            <div class="card-div2">
             <img id="pc2" src="./img/2.png">
+          </div>
+          <div class="card-div3">
             <img id="pc3" src="./img/3.png">
+          </div>
+          <div class="card-div4">
             <img id="pc4" src="./img/4.png">
+          </div>
+          <div class="card-div5">
             <img id="pc5" src="./img/5.png">
+          </div>
+          <div class="card-div6">
             <img id="pc6" src="./img/6.png">
+          </div>
+          <div class="card-div7">
             <img id="pc7" src="./img/7.png">
+          </div>
+          <div class="card-div8">
             <img id="pc8" src="./img/8.png">
+          </div>
+          <div class="card-div9">
             <img id="pc9" src="./img/9.png">
+          </div>
+          <div class="card-div10">
             <img id="pc10" src="./img/10.png">
+          </div>
+          <div class="card-div11">
             <img id="pc11" src="./img/11.png">
+          </div>
+          <div class="card-div12">
             <img id="pc12" src="./img/12.png">
+          </div>
+            
           </div>
       </div>
   </div>
