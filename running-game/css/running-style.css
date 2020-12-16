@@ -20,7 +20,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background-color: #001B3D;
+  background-color: red;
 }
 
 .border {
@@ -45,7 +45,7 @@ body {
 
 .border .bordermiddle {
   height: 30px;
-  width: 75vw;
+  width: calc(85vw - 100px);
   background-image: url(../assets/middleBorder.png);
 }
 
