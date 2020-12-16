@@ -34,7 +34,6 @@ body {
   background-color: none;
   width: 85vw;
   height: 30px;
-  z-index: 2;
 }
 
 .border .borderleft {
@@ -56,8 +55,7 @@ body {
 }
 
 #gameContainer {
-  z-index: -1;
-  height: 65vh;
+  height: 70vh;
   width: 85vw;
   background-color: #001B3D;
   background-image: url(../assets/bg.png);
@@ -89,6 +87,13 @@ body {
 
 .container {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #snow {
