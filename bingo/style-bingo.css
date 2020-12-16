@@ -1,8 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 body {
-  padding: 100px 30px;
   background-color: #001B3D;
+  margin: 0;
+  padding: 0px;
+  position: relative;
+  padding-bottom: 20%;
+  min-height: 100vh;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
 }
 
 h1, h2, h3, h4, h5 {
@@ -29,6 +39,20 @@ p {
 .nav-link:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.footer-image {
+  width: 100%;
+}
+
+.footer-image img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+main {
+  padding-top: 100px;
 }
 
 button {
@@ -120,22 +144,6 @@ button h3 {
   -ms-grid-column-align: center;
       justify-self: center;
   padding: 5px;
-}
-
-body {
-  margin: 0;
-  padding: 0px;
-  position: relative;
-  padding-bottom: 250px;
-  min-height: 100vh;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-  /* position: fixed;
-    z-index: 1; */
 }
 
 .run-pumping {
