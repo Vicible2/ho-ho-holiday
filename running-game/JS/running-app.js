@@ -11,8 +11,11 @@ let gravity;
 let obstacles = [];
 let gameSpeed;
 let keys = {};
+let avatar = document.createElement('img');
 
-//let character = new Image(src);
+
+//load avatar into class player.
+
 
 //Event Listeners
 document.addEventListener('keydown', (event) => {
@@ -23,7 +26,7 @@ document.addEventListener('keyup', (event) => {
 });
 
 
-
+// Classes
 class Player {
     constructor(x, y, w, h, c) {
         // xAxis, yAxis, width, height, color
@@ -72,6 +75,7 @@ class Player {
 
 
         this.draw();
+        this.drawImage();
     }
     jump() {
         if (this.grounded && this.jumpTimer == 0) {
@@ -83,15 +87,23 @@ class Player {
         }
     }
 
+    drawImage() {
 
-    draw() { //draw function to create basic rectangle that is the player (will be replace with pixelAvatar later)
+        avatar.src = "../assets/sprites/santa-idle.gif"
+        img.addEventListener('Load', () => {
+            for (let imgX = 10; imgX < 200; imgX +=30) {
+                context.drawImage(avatar, imgX, 10);
+            }
+        })
+    }
+   /* draw() { //draw function to create basic rectangle that is the player (will be replace with pixelAvatar later)
         context.beginPath();
         context.fillStyle = this.c;
         context.fillRect(this.x, this.y, this.w, this.h);
         context.closePath(); 
         // context.drawImage(character, 0, 0, canvas.width, canvas.height);
         
-    }
+    } */
 }
 
 class Obstacle {
@@ -154,8 +166,6 @@ spawnObstacle = () => {
     obstacles.push(obstacle);
 
 }
-
-
 //RandomInteger to define obstacle size & type
 randomObstacleInt = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min)
