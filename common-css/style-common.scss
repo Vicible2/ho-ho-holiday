@@ -11,38 +11,46 @@ $yellow: #F5D3A0;
 $titlefont: 'Amatic SC', cursive;
 $contentfont: 'Open Sans Condensed', sans-serif;
 
-body{
-    padding: 100px 30px;
-    background-color: $darkblue;
-}
 
+body{
+    background-color: $darkblue;
+    margin: 0;
+    padding: 0px;
+    position: relative;
+    padding-bottom: 20%;
+    min-height: 100vh ;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    //height: 10%;
+}
 h1,h2,h3,h4,h5{
     font-family: $titlefont;
     color: $silverblue;
-
 }
-
 p{
     font-family: $contentfont;
     color: $silverblue;
     margin: 0;
 }
-
-
 .navbar-brand{
     padding-left: 30px;
 }
-
 .navbar-expand-lg .navbar-nav .nav-link {
     padding: 10px;
     color:#E1F2F7; 
     font-size: 20px; 
-   
-
 }
-
 .nav-link:hover{
     transform: scale(1.1);
 }
-
+.footer-image{
+    width: 100%;
+        img{
+        width: 100%; 
+        object-fit: contain;
+      }
+}
 

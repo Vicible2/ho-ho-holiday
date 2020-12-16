@@ -56,6 +56,9 @@ button h3 {
   display: grid;
   -ms-grid-columns: 30% 70%;
       grid-template-columns: 30% 70%;
+  grid-gap: 2rem;
+  width: 90vw;
+  margin: auto;
 }
 
 .computer-card {
@@ -70,13 +73,14 @@ button h3 {
 
 .computer-card img {
   padding-top: 100px;
-  width: 300px;
+  width: 250px;
 }
 
 .player-card {
   background-color: #B7D4FC;
-  width: 910px;
-  padding-bottom: 5px;
+  width: 80%;
+  margin: auto;
+  padding: 5px;
 }
 
 .card-title {
@@ -101,8 +105,7 @@ button h3 {
 .card {
   border-radius: 5px;
   background-color: #E1F2F7;
-  width: 900px;
-  height: 680px;
+  width: 95%;
   margin: auto;
   display: -ms-grid;
   display: grid;
@@ -117,6 +120,22 @@ button h3 {
   -ms-grid-column-align: center;
       justify-self: center;
   padding: 5px;
+}
+
+body {
+  margin: 0;
+  padding: 0px;
+  position: relative;
+  padding-bottom: 250px;
+  min-height: 100vh;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  /* position: fixed;
+    z-index: 1; */
 }
 
 .run-pumping {

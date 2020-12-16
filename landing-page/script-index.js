@@ -71,5 +71,5 @@ appearText = () =>{
     text4.classList.add("game-text-four-appear");
   }
 }
-appearText();
+window.addEventListener("scroll", appearText);
 

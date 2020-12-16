@@ -1,6 +1,8 @@
 @import "../common-css/style-common.scss";
 
 
+// TODO: responsivess
+
 
 button{
     border: 2px solid $lightblue;
@@ -23,6 +25,9 @@ button{
 .container{
     display: grid;
     grid-template-columns: 30% 70%;
+    grid-gap:2rem;
+    width: 90vw;
+    margin: auto;
 }
 
 .computer-card{
@@ -32,14 +37,15 @@ button{
     justify-self: center;
     img{
         padding-top: 100px;
-        width: 300px;
+        width: 250px;
     }
 }
 
 .player-card{
     background-color: $medblue;
-    width: 910px;
-    padding-bottom: 5px;
+    width: 80%;
+    margin:auto;
+    padding: 5px;
 }
 
 .card-title{
@@ -60,8 +66,8 @@ button{
 .card{
     border-radius: 5px;
     background-color: $silverblue;
-    width: 900px;
-    height: 680px;
+    width: 95%;
+    //height: 680px;
     margin:auto;
     display: grid;
     grid-template-columns: repeat(4, 25%);
@@ -73,6 +79,26 @@ button{
         padding: 5px;
     }
 }
+body{
+    margin: 0;
+    padding: 0px;
+    position: relative;
+  padding-bottom: 250px;
+  min-height: 100vh ;
+
+}
+footer {
+ 
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    /* position: fixed;
+    z-index: 1; */
+  }
+// .test{
+//     height: 800px;
+//     background-color: darkgoldenrod;
+// }
 
 // animation class(will be add by javascript)
 .run-pumping {
