@@ -3,15 +3,50 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #001B3D;
+
 }
+
+.border {
+    
+    padding-top: 3px;
+    display: flex;
+    flex-direction: row;
+    background-color: none;
+
+    width: 86vw;
+    height: 30px;
+
+
+    .borderleft {
+        height: 30px;
+        width: 50px;
+        background-image: url(../assets/leftBorder.png);
+    }
+
+    .bordermiddle {
+        height: 30px;
+        width: calc(86vw - 100px);
+        background-image: url(../assets/middleBorder.png);
+    }
+
+    .borderright {
+        height: 30px;
+        width: 50px;
+        background-image: url(../assets/rightBorder.png);
+    }
+}
+
 #gameContainer {
-    height: 80vh;
+
+    height: 70vh;
     width: 85vw;
     background-color: #001B3D;
     background-image: url(../assets/bg.png);
@@ -19,6 +54,7 @@ body{
     background-repeat: no-repeat;
     background-position: left bottom;
 }
+
 .tiles {
     width: 85vw;
     height: 4vh;
@@ -26,7 +62,9 @@ body{
     background-image: url(../assets/snowtile.png);
     background-size: 2vw;
     background-position: left top;
+    border-radius: 0 0 5px 5px;
 }
+
 .moon {
     position: absolute;
     right: 40px;
@@ -37,9 +75,13 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .container {
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
+
 #snow {
     position: fixed;
     top: 0;
