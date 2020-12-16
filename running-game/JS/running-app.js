@@ -87,7 +87,7 @@ class Player {
         }
     }
 
-    drawImage() {
+    /* drawImage() {
 
         avatar.src = "../assets/sprites/santa-idle.gif"
         img.addEventListener('Load', () => {
@@ -95,15 +95,15 @@ class Player {
                 context.drawImage(avatar, imgX, 10);
             }
         })
-    }
-   /* draw() { //draw function to create basic rectangle that is the player (will be replace with pixelAvatar later)
+    }*/
+    draw() { //draw function to create basic rectangle that is the player (will be replace with pixelAvatar later)
         context.beginPath();
         context.fillStyle = this.c;
         context.fillRect(this.x, this.y, this.w, this.h);
         context.closePath(); 
         // context.drawImage(character, 0, 0, canvas.width, canvas.height);
         
-    } */
+    } 
 }
 
 class Obstacle {
