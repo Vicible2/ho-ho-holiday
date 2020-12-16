@@ -52,82 +52,279 @@ width: 50px;
 animation-duration: 8s/*duration*/ ;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: "Amatic SC", cursive;
+  color: #E1F2F7;
+}
 
+p {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #E1F2F7;
+  margin: 0;
+}
 
+.navbar-brand {
+  padding-left: 30px;
+}
 
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 10px;
+  color: #E1F2F7;
+  font-size: 20px;
+}
 
 @keyframes mysleigh{
    
     from{transform : translateX(0)}
     to{transform: translateX(100px)}
 
+.footer-image {
+  width: 100%;
 }
 
-img[target=one]{
-    animation-name:mysleigh;
-    animation-duration: 50s ;
-    animation-delay: 0.1s;
-    position:absolute;
-    animation-iteration-count: infinite;
-    top:-20px;
-    transition: width 2s, height 4s;
-    animation-timing-function:ease-in;
-
-
+.footer-image img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
-img[target=two]{
-    animation-name:mysleigh;
-    animation-duration: 70s;
-    animation-delay: 0.1s;
-    position: absolute;
-    animation-iteration-count: infinite;
-    left:50px;
-
-
+@-webkit-keyframes myanimation {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  17% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  20% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  37% {
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+  }
+  40% {
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+  }
+  57% {
+    -webkit-transform: translateX(-40%);
+            transform: translateX(-40%);
+  }
+  60% {
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+  77% {
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+  80% {
+    -webkit-transform: translateX(-80%);
+            transform: translateX(-80%);
+  }
+  97% {
+    -webkit-transform: translateY(-80%);
+            transform: translateY(-80%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
 }
-img[target=three]{
-    animation-name:mysleigh;
-    animation-duration:40s;
-    animation-delay: 0.1s;
-    position: absolute;
-    animation-iteration-count: infinite;
-    right:0px;
-    bottom:-30px;
+
+@keyframes myanimation {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  17% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  20% {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  37% {
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+  }
+  40% {
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+  }
+  57% {
+    -webkit-transform: translateX(-40%);
+            transform: translateX(-40%);
+  }
+  60% {
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+  77% {
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+  80% {
+    -webkit-transform: translateX(-80%);
+            transform: translateX(-80%);
+  }
+  97% {
+    -webkit-transform: translateY(-80%);
+            transform: translateY(-80%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
 }
 
-img[target=four]{
-    animation-name:mysleigh;
-    animation-duration:62s;
-    animation-delay: 0.2s;
-    position: absolute;
-    animation-iteration-count: infinite;
-    left:100px;
-    bottom:-20px;
-    animation-timing-function: cubic-bezier(0,0,1,1);
-}
-img[target=five]{
-    animation-name:mysleigh;
-    animation-duration:92s;
-    animation-delay: 0.2s;
-    position: absolute;
-    animation-iteration-count: infinite;
-    top:200px;
-}
-img[target=six]{
-    animation-name:mysleigh;
-    animation-duration:32s;
-    animation-delay: 0.2s;
-    position: absolute;
-    animation-iteration-count: infinite;
-    right:100px;
-    bottom:-20px;
+img[title] {
+  opacity: 0;
+  -webkit-transition: opacity 230ms ease-in-out;
+  transition: opacity 230ms ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: myanimation;
+          animation-name: myanimation;
+  position: relative;
+  width: 50px;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
 }
 
+@-webkit-keyframes mysleigh {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+  }
+}
+
+@keyframes mysleigh {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+  }
+}
+
+img[target=one] {
+  -webkit-animation-name: mysleigh;
+          animation-name: mysleigh;
+  -webkit-animation-duration: 50s;
+          animation-duration: 50s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  position: absolute;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  top: -20px;
+  -webkit-transition: width 2s, height 4s;
+  transition: width 2s, height 4s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+img[target=two] {
+  -webkit-animation-name: mysleigh;
+          animation-name: mysleigh;
+  -webkit-animation-duration: 70s;
+          animation-duration: 70s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  position: absolute;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  left: 50px;
+}
+
+img[target=three] {
+  -webkit-animation-name: mysleigh;
+          animation-name: mysleigh;
+  -webkit-animation-duration: 40s;
+          animation-duration: 40s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  position: absolute;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  right: 0px;
+  bottom: 30px;
+}
+
+img[target=four] {
+  -webkit-animation-name: mysleigh;
+          animation-name: mysleigh;
+  -webkit-animation-duration: 62s;
+          animation-duration: 62s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  position: absolute;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  left: 100px;
+  bottom: 20px;
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);
+          animation-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+
+img[target=five] {
+  -webkit-animation-name: mysleigh;
+          animation-name: mysleigh;
+  -webkit-animation-duration: 92s;
+          animation-duration: 92s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  position: absolute;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  top: 200px;
+}
+
+img[target=six] {
+  -webkit-animation-name: mysleigh;
+          animation-name: mysleigh;
+  -webkit-animation-duration: 32s;
+          animation-duration: 32s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  position: absolute;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  right: 100px;
+  bottom: 20px;
+}
 
 
+h1 {
+  font-family: "Amatic SC", cursive;
+  color: #E1F2F7;
+}
 
+p {
+  font-family: "Amatic SC", cursive;
+  color: #E1F2F7;
+}
 
+#myform {
+  padding: 10px;
+  margin: 10px;
+  font-size: 50px;
+}
 
-
-
+.button {
+  padding: 10px;
+  margin: 10px;
+  font-size: 50px;
+}
+/*# sourceMappingURL=trial-style.css.map */
