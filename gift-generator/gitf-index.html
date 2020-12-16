@@ -3,52 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ho-Ho</title>
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="gift-style.css">
-    <link rel ="shortcut icon" type ='image/png' href="image/favicon.png">
+
+    <title>Ho Ho Holiday</title>
+
+    <!-- favicon insert -->
+    <link rel="shortcut icon" type="image/png" href="../navbar+footer/snowflake.png">
 </head>
+
 <body>
-    <h1>Welcome to Name Generator</h1>
-    <h1>Secret Santa</h1>
-    <form id="inputpeople">
 
-        <input type="text" placeholder="Enter Names" id="names" />
-
-        <div class="button">
-
-            <button id="submit">Add names</button>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="color:#E1F2F7;">
+            <h2><b>HO-HO-HOLIDAY</b></h2></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html"><p>Home</p></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " href="#"><p>Drag & Drop</p></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><p>Running Game</p></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#"><p>Gift Idea Generator</p></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../bingo/bingo.html"><p>Bingo</p></a>
+              </li>
+            </ul>        
+          </div>
         </div>
+      </nav>
+      <!-- end of navbar -->
 
-    </form>
-
-    <button id="result">Click for final list</button>
-
-    <div class="output">
-
-        <p id="outputText">Lets see who is joining Secret Santa!</p>
-    </div>
+    <main>
+      <!-- your page content here   -->
 
 
-
-
-    <!-- <img src="image/socks.png" target="socks" alt="socks"> -->
-    <img src="image/sleigh.png" target="one" alt="sleigh">
-    <img src="image/sleigh.png" target="two" alt="sleigh">
-    <img src="image/sleigh.png" target="three" alt="sleigh">
-    <img src="image/sleigh.png" target="four" alt="sleigh">
+        <h1>Welcome to Name Generator</h1>
+        <h1>Secret Santa</h1>
+        <form id="inputpeople">
     
-    <img src="image/sleigh.png" target="five" alt="sleigh">
-    <img src="image/sleigh.png" target="six" alt="sleigh">
-
-
-
+            <input type="text" placeholder="Enter Names" id="names" />
     
+            <div class="button">
+    
+                <button id="submit">Add names</button>
+            </div>
+    
+        </form>
+    
+        <button id="result">Click for final list</button>
+    
+        <div class="output">
+    
+            <p id="outputText">Lets see who is joining Secret Santa!</p>
+        </div>
+    
+    
+    
+    
+        <!-- <img src="image/socks.png" target="socks" alt="socks"> -->
+        <img src="image/sleigh.png" target="one" alt="sleigh">
+        <img src="image/sleigh.png" target="two" alt="sleigh">
+        <img src="image/sleigh.png" target="three" alt="sleigh">
+        <img src="image/sleigh.png" target="four" alt="sleigh">
+        
+        <img src="image/sleigh.png" target="five" alt="sleigh">
+        <img src="image/sleigh.png" target="six" alt="sleigh">
+    
+    
+    
+        
+    
+    
+    
+      
 
+    </main>  
 
+    <!-- footer start here     -->
+    <footer id="footer">
+      <div class="footer-image">
+      <img src="../tree-image/trees.png" alt="snow">
+      </div>
+    </footer>  
 
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
+    <!-- giftgenerator js  -->
+    <script src="gift-script.js"></script>
 
-
-   <script src="gift-script.js"></script>
 </body>
 </html>
