@@ -20,6 +20,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
+  background-color: #001B3D;
 }
 
 #gameContainer {

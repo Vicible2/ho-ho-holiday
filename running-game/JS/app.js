@@ -159,10 +159,10 @@ function Start () {
     highscore = localStorage.getItem('highscore');
   }
 
-  player = new Player(25, 0, 50, 50, '#FF5858');
+  player = new Player(250, 0, 50, 50, '#FF5858');
 
-  scoreText = new Text("Score: " + score, 25, 25, "left", "#212121", "20");
-  highscoreText = new Text("Highscore: " + highscore, canvas.width - 25, 25, "right", "#212121", "20");
+  scoreText = new Text("Score: " + score, 25, 25, "left", "#E1F2F7", "20");
+  highscoreText = new Text("Highscore: " + highscore, canvas.width - 25, 25, "right", "#E1F2F7", "20");
 
   requestAnimationFrame(Update);
 }
@@ -225,8 +225,8 @@ function Update () {
 }
 // Window resize to keep background-responsive
 window.addEventListener('resize', () => {
-    canvas.height = windows.innerHeight;
-    canvas.width = windows.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
 })
 
 Start();
