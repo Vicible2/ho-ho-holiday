@@ -1,21 +1,45 @@
   
+/* @import "./common-css/style-common.scss"; */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 
 
-@keyframes myanimation {
-    from { transform : translateX(0) }
-    17%  { transform : translateX(0%) }
-    20%  { transform : translateY(-20%) }
-    37%  { transform : translateX(-20%) }
-    40%  { transform : translateY(-40%) }
-    57%  { transform : translateX(-40%) }
-    60%  { transform : translateX(-60%) }
-    77%  { transform : translateX(-60%) }
-    80%  { transform : translateX(-80%) }
-    97%  { transform : translateY(-80%) }
-    to   { transform : translateX(0%) }
+body {
+    background-color: #001B3D;
+    }
+    
+    h1 {
+      font-family: "Amatic SC", cursive;
+      color: #E1F2F7;
+    }
+    
+    p {
+      font-family: "Amatic SC", cursive;
+      color: #E1F2F7;
+    }
+  
+    #myform{
+        padding:10px;
+        margin:10px;
+        font-size:50px;
+    }
+  
+    .button{
+      padding:10px;
+      margin:10px;
+      font-size:50px;
+  
+  
+    }
+
+main {
+    padding-top:100px;
+    text-align: center;
+    width: 100%;
+
 }
+
+
 
 
 img[title]{
@@ -35,7 +59,7 @@ animation-duration: 8s/*duration*/ ;
 @keyframes mysleigh{
    
     from{transform : translateX(0)}
-    to{transform: translateX(500px)}
+    to{transform: translateX(100px)}
 
 }
 
@@ -102,35 +126,6 @@ img[target=six]{
 
 
 
-body {
-  padding: 30px;
-  background-color: #001B3D;
-  text-align: center;
-  }
-  
-  h1 {
-    font-family: "Amatic SC", cursive;
-    color: #E1F2F7;
-  }
-  
-  p {
-    font-family: "Amatic SC", cursive;
-    color: #E1F2F7;
-  }
-
-  #myform{
-      padding:10px;
-      margin:10px;
-      font-size:50px;
-  }
-
-  .button{
-    padding:10px;
-    margin:10px;
-    font-size:50px;
-
-
-  }
 
 
 
