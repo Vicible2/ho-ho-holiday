@@ -20,10 +20,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background-color: red;
+  background-color: #001B3D;
 }
 
 .border {
+  padding-top: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,7 +33,7 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: none;
-  width: 85vw;
+  width: 86vw;
   height: 30px;
 }
 
@@ -44,7 +45,7 @@ body {
 
 .border .bordermiddle {
   height: 30px;
-  width: calc(85vw - 100px);
+  width: calc(86vw - 100px);
   background-image: url(../assets/middleBorder.png);
 }
 
