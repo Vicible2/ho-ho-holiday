@@ -3,8 +3,107 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 
 
+@keyframes myanimation {
+    from { transform : translateX(0) }
+    17%  { transform : translateX(0%) }
+    20%  { transform : translateY(-20%) }
+    37%  { transform : translateX(-20%) }
+    40%  { transform : translateY(-40%) }
+    57%  { transform : translateX(-40%) }
+    60%  { transform : translateX(-60%) }
+    77%  { transform : translateX(-60%) }
+    80%  { transform : translateX(-80%) }
+    97%  { transform : translateY(-80%) }
+    to   { transform : translateX(0%) }
+}
+
+
+img[title]{
+opacity: 0;
+transition: opacity 230ms ease-in-out;
+animation-iteration-count : infinite;
+animation-name:myanimation;
+position: relative;
+width: 50px;
+animation-duration: 8s/*duration*/ ;
+}
+
+
+
+
+
+@keyframes mysleigh{
+   
+    from{transform : translateX(0)}
+    to{transform: translateX(500px)}
+
+}
+
+img[target=one]{
+    animation-name:mysleigh;
+    animation-duration: 50s ;
+    animation-delay: 0.1s;
+    position:absolute;
+    animation-iteration-count: infinite;
+    top:-20px;
+    transition: width 2s, height 4s;
+    animation-timing-function:ease-in;
+
+
+}
+
+img[target=two]{
+    animation-name:mysleigh;
+    animation-duration: 70s;
+    animation-delay: 0.1s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    left:50px;
+
+
+}
+img[target=three]{
+    animation-name:mysleigh;
+    animation-duration:40s;
+    animation-delay: 0.1s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    right:0px;
+    bottom:-30px;
+}
+
+img[target=four]{
+    animation-name:mysleigh;
+    animation-duration:62s;
+    animation-delay: 0.2s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    left:100px;
+    bottom:-20px;
+    animation-timing-function: cubic-bezier(0,0,1,1);
+}
+img[target=five]{
+    animation-name:mysleigh;
+    animation-duration:92s;
+    animation-delay: 0.2s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    top:200px;
+}
+img[target=six]{
+    animation-name:mysleigh;
+    animation-duration:32s;
+    animation-delay: 0.2s;
+    position: absolute;
+    animation-iteration-count: infinite;
+    right:100px;
+    bottom:-20px;
+}
+
+
+
 body {
-    padding: 30px;
+  padding: 30px;
   background-color: #001B3D;
   text-align: center;
   }
