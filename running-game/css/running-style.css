@@ -20,10 +20,43 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
+  background-color: #001B3D;
+}
+
+.border {
+  padding-top: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: none;
+  width: 86vw;
+  height: 30px;
+}
+
+.border .borderleft {
+  height: 30px;
+  width: 50px;
+  background-image: url(../assets/leftBorder.png);
+}
+
+.border .bordermiddle {
+  height: 30px;
+  width: calc(86vw - 100px);
+  background-image: url(../assets/middleBorder.png);
+}
+
+.border .borderright {
+  height: 30px;
+  width: 50px;
+  background-image: url(../assets/rightBorder.png);
 }
 
 #gameContainer {
-  height: 80vh;
+  height: 70vh;
   width: 85vw;
   background-color: #001B3D;
   background-image: url(../assets/bg.png);
@@ -39,6 +72,7 @@ body {
   background-image: url(../assets/snowtile.png);
   background-size: 2vw;
   background-position: left top;
+  border-radius: 0 0 5px 5px;
 }
 
 .moon {
@@ -54,6 +88,13 @@ body {
 
 .container {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #snow {
@@ -65,4 +106,18 @@ body {
   pointer-events: none;
   z-index: 1000;
 }
+
+/* .sound {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vh;
+    padding: 1vh;
+    .muteButton {
+        background-image: url(../assets/volume.png);
+        background-size: cover;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+}*/
 /*# sourceMappingURL=running-style.css.map */
