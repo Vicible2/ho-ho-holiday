@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+.explain{
+    text-align: center;
+    height: 450px;
+    width: 300px;
+    padding: 10px;
+}
+
+.explain h1{
+    color: #001B3D;
+    font-family: 'Amatic SC', cursive;
+    font-size: 60px;
+    text-align: center;
+}
+
+.explain p{
+    color: #001B3D;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding-top: 50px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    margin-bottom: -150px;
+}
+
+#elf{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+#container-game{
+    width: 400px;
+    height: 450px;
+    background-color: #F5D3A0;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    border-radius: 8px;
+}
+
+.container{
+    background-color: #E1F2F7;
+    width: 750px;
+    height: 500px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 8px;
+}
+
+#wraper{
+    width: 500px;
+    height: 500px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+}

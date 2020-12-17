@@ -15,40 +15,71 @@ document.getElementById("submit").addEventListener("click", (event) => {
 document.getElementById("result").addEventListener("click", () => {
 
  document.getElementById("inputpeople").style.display="none";
- document.getElementById("outputText").innerHTML="Here is your dearest people :"+ nameLists;
+ let=output=document.getElementById("outputText");
+ output.innerHTML="Here is your dearest people :"+ nameLists;
+ 
 
 
-    let pair = function (letsPairUp) {
+
+
+    function drawList()
+ {
+     output.innerHTML = '<option value="">Who are you?</option>';
+     for (var i = nameLists.length - 1; i >= 0; i--) {
+         var option = document.createElement('option');
+         option.value = i;
+         option.innerHTML = nameLists[i];
+         output.appendChild(option);
+     }
+ }
+ 
+    let pair = function (myPeople) {
     
     
-    let pairs = [];//empty array to put paired names
-    let recipients = letsPairUp.slice(); // variable to divide all the names one by one 
+    let emptyArray = [];//empty array to put paired names
+    let recipients = myPeople.slice(); // variable to divide all the names one by one 
 
     // var winner = letsPairUp[Math.floor(Math.random()*letsPairUp.length)];
     // console.log(winner);
 
-    for (let i = 0; i < letsPairUp.length; i++) { //loop through the names that are sliced
+    for (let i = 0; i < myPeople.length; i++) { //loop through the names that are sliced
 
-        let sender = letsPairUp[i];		// var to get the index of people
-        let recipientIndex = Math.floor(Math.random() * recipients.length); //var to randomly get the number of divided people's 
+        let sender = myPeople[i];		// var to get the index of people
+        let randomNumber = Math.floor(Math.random() * recipients.length -1); //var to randomly get the number of divided people's 
 
-    while (recipients[recipientIndex] === sender) { // divided people's random number is equal to sender!! Can't send gift to myself
+    while (recipients[randomNumber] === sender) { // divided people's random number is equal to sender!! Can't send gift to myself
 
-        recipientIndex = Math.floor(Math.random() * recipients.length); // not sure why its repeated as line 34
+        randomNumber = Math.floor(Math.random() * recipients.length -1); // not sure why its repeated as line 34
     }
 
-        let recipient = recipients.splice(recipientIndex, 1)[0];
-        pairs.push({sender: sender,receiver: recipient});
+        let recipient = recipients.splice(randomNumber, 1)[0];
+        emptyArray.push({sender: sender,receiver: recipient});
 
         document.getElementById("yourpair").innerHTML= sender +" "+ "Prepare your surprise for " + " "  + recipient;
 
     }
     
-    return pairs;
+    return emptyArray;
     };
 
-console.log(pair(nameLists));
+// console.log(pair(nameLists));
 
+    emptyArray=pair(nameLists);
+    emptyArray.forEach(person => {
+
+        let specific=person.sender;
+        console.log(specific);
+        
+
+
+        
+
+
+
+
+ });
+
+ drawList();
 
 });
 
