@@ -38,7 +38,7 @@ main{
 #container-game{
     width: 500px;
     height: 450px;
-    background-color: #D8E8FD;
+    background-image: url("img/gamebackground.png");
     display: flex;
     justify-content: center;
     padding-top: 20px;
