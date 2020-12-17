@@ -12,10 +12,11 @@ body {
     height: 100vh;
     background-color: #001B3D;
 
+
 }
 
 .border {
-    
+
     padding-top: 3px;
     display: flex;
     flex-direction: row;
@@ -91,3 +92,18 @@ body {
     pointer-events: none;
     z-index: 1000;
 }
+
+
+/* .sound {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vh;
+    padding: 1vh;
+    .muteButton {
+        background-image: url(../assets/volume.png);
+        background-size: cover;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+}*/

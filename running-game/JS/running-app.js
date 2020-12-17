@@ -100,10 +100,10 @@ class Player {
         context.beginPath();
         context.fillStyle = this.c;
         context.fillRect(this.x, this.y, this.w, this.h);
-        context.closePath(); 
+        context.closePath();
         // context.drawImage(character, 0, 0, canvas.width, canvas.height);
-        
-    } 
+
+    }
 }
 
 class Obstacle {
@@ -236,18 +236,18 @@ update = () => {
             player.x + player.w > o.x &&
             player.y < o.y + o.h &&
             player.y + player.h > o.y
-            ) {
-                obstacles = [];
-                score = 0;
-                spawnTimer = initialSpawnTimer;
-                gameSpeed = 2;
+        ) {
+            obstacles = [];
+            score = 0;
+            spawnTimer = initialSpawnTimer;
+            gameSpeed = 2;
 
-                window.localStorage.setItem('highscore', highscore);
-            }
+            window.localStorage.setItem('highscore', highscore);
+        }
 
 
 
-            o.update();
+        o.update();
     }
 
     player.Animate();
@@ -256,10 +256,10 @@ update = () => {
     scoreText.t = "Score: " + score;
     scoreText.draw();
 
-    if(score > highscore) {
+    if (score > highscore) {
         highscore = score;
         highscoreText.t = "Higscore: " + highscore;
-       
+
     }
 
     highscoreText.draw();
