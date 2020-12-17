@@ -178,14 +178,14 @@ drawSanta = () => {
   
   let santaY = canvas.height - santaImage.height - streetHeight;
   console.log(santaY);
-  ctx.drawImage(santaImage, 0, 0, 100, 100, 250, santaY, 200, 200)
+  ctx.drawImage(santaImage, 0, 0, 100, 100, 250, santaY, 300, 200)
 }
 
 //initialize function so all variables are at default values.
 function Start() {
 
   //Image sprite test
-  santaImage.src = "./assets/sprites/santa-idle.gif"
+  santaImage.src = "./assets/sprites/santa-sprite-sheet.png"
   santaImage.onload = () => {
     drawSanta();
   }
