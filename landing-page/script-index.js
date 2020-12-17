@@ -73,3 +73,6 @@ appearText = () =>{
 }
 window.addEventListener("scroll", appearText);
 
+
+
+
