@@ -250,9 +250,9 @@ function Update() {
   gameSpeed += 0.0002;
 }
 // Window resize to keep background-responsive
-window.addEventListener('resize', () => {
+/*window.addEventListener('resize', () => {
   canvas.height = window.innerHeight;
   canvas.width = window.innerWidth;
-})
+})*/
 
 Start();
