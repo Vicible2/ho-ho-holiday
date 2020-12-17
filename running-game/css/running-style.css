@@ -1,3 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+body {
+  background-color: #001B3D;
+  margin: 0;
+  padding: 0px;
+  position: relative;
+  padding-bottom: 20%;
+  min-height: 100vh;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Amatic SC", cursive;
+  color: #E1F2F7;
+}
+
+p {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #E1F2F7;
+  margin: 0;
+}
+
+.navbar-brand {
+  padding-left: 30px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 10px;
+  color: #E1F2F7;
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.footer-image {
+  width: 100%;
+}
+
+.footer-image img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +73,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background-color: #001B3D;
+}
+
+main {
+  padding-top: 20%;
 }
 
 .border {
@@ -33,7 +89,7 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: none;
-  width: 86vw;
+  width: 85vw;
   height: 30px;
 }
 
@@ -86,7 +142,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.container {
+.container-game {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -1,3 +1,5 @@
+@import "../../common-css/style-common.scss";
+  
 * {
     margin: 0;
     padding: 0;
@@ -10,18 +12,19 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #001B3D;}
+}
+main{
+    padding-top: 20%;
+}
 
+  
 .border {
-
     padding-top: 3px;
     display: flex;
     flex-direction: row;
     background-color: none;
-
-    width: 86vw;
+    width: 85vw;
     height: 30px;
-
 
     .borderleft {
         height: 30px;
@@ -43,7 +46,6 @@ body {
 }
 
 #gameContainer {
-
     height: 70vh;
     width: 85vw;
     background-color: #001B3D;
@@ -74,7 +76,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.container {
+.container-game {
     position: relative;
     display: flex;
     flex-direction: column;

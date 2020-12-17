@@ -54,11 +54,14 @@ function compare(randomCard){
         winSound.play();
 
         setTimeout(() => {
-            document.querySelector(".card-div1").style.backgroundColor = "#001B3D";
+            // document.querySelector(".card-div1").style.backgroundColor = "#001B3D";
 
-            document.querySelector(".card-div2").style.backgroundColor = "#001B3D";
-            document.querySelector(".card-div3").style.backgroundColor = "#001B3D";
-            document.querySelector(".card-div4").style.backgroundColor = "#001B3D";
+            // document.querySelector(".card-div2").style.backgroundColor = "#001B3D";
+            // document.querySelector(".card-div3").style.backgroundColor = "#001B3D";
+            // document.querySelector(".card-div4").style.backgroundColor = "#001B3D";
+
+            winSound.play();
+
 
         }, 3500);
 
@@ -71,13 +74,15 @@ function compare(randomCard){
 
     } else if(bingoArray.includes(4) && bingoArray.includes(5) && bingoArray.includes(6) && bingoArray.includes(7)){
         console.log("second row");
-        winSound.play();
 
         setTimeout(() => {
-            document.querySelector(".card-div5").style.backgroundColor = "#001B3D";
-            document.querySelector(".card-div6").style.backgroundColor = "#001B3D";
-            document.querySelector(".card-div7").style.backgroundColor = "#001B3D";
-            document.querySelector(".card-div8").style.backgroundColor = "#001B3D";
+            // document.querySelector(".card-div5").style.backgroundColor = "#001B3D";
+            // document.querySelector(".card-div6").style.backgroundColor = "#001B3D";
+            // document.querySelector(".card-div7").style.backgroundColor = "#001B3D";
+            // document.querySelector(".card-div8").style.backgroundColor = "#001B3D";
+
+            winSound.play();
+
 
         }, 3500);
 
@@ -91,13 +96,15 @@ function compare(randomCard){
 
     } else if(bingoArray.includes(8) && bingoArray.includes(9) && bingoArray.includes(10) && bingoArray.includes(11)){
         console.log("third row");
-        winSound.play();
+        
 
         setTimeout(() => {
-            document.querySelector("#pc9").style.backgroundColor = "#001B3D";
-            document.querySelector("#pc10").style.backgroundColor = "#001B3D";
-            document.querySelector("#pc11").style.backgroundColor = "#001B3D";
-            document.querySelector("#pc12").style.backgroundColor = "#001B3D";
+            // document.querySelector(".card-div-9").style.backgroundColor = "#001B3D";
+            // document.querySelector(".card-div-10").style.backgroundColor = "#001B3D";
+            // document.querySelector(".card-div-11").style.backgroundColor = "#001B3D";
+            // document.querySelector(".card-div-12").style.backgroundColor = "#001B3D";
+
+            winSound.play();
         }, 3500);
         // document.querySelector("#pc9").classList.add("run-pumping");
         // document.querySelector("#pc10").classList.add("run-pumping");
@@ -121,7 +128,7 @@ function winGame(){
 
    
 
-    //TODO: replay btn not show up
+    //TODO: play again button come much faster than the sound
         setTimeout(() => {  replayDivLocation.style.display = "block"; }, 2000);
         
 }
@@ -168,27 +175,36 @@ function matchingCard(randomCard){
         }, 1000);
 
         setTimeout(() => {
+
             document.querySelector("#pc1").remove();
+            document.querySelector(".card-div1").classList.add("card-background");
+
         }, 3000);
 
     }  else if(randomCard == 1){
 
         setTimeout(() => {       
             document.querySelector("#pc2").classList.add("run-pumping");
+
         }, 1000);
 
         setTimeout(() => {
             document.querySelector("#pc2").remove();
+            document.querySelector(".card-div2").classList.add("card-background");
+
         }, 3000);
 
     }  else if(randomCard == 2){
 
         setTimeout(() => {       
             document.querySelector("#pc3").classList.add("run-pumping");
+
         }, 1000);
 
         setTimeout(() => {
             document.querySelector("#pc3").remove();
+            document.querySelector(".card-div3").classList.add("card-background");
+
         }, 3000);
 
     }  else if(randomCard == 3){
@@ -196,10 +212,13 @@ function matchingCard(randomCard){
 
         setTimeout(() => {       
             document.querySelector("#pc4").classList.add("run-pumping");
+            
         }, 1000);
 
         setTimeout(() => {
             document.querySelector("#pc4").remove();
+            document.querySelector(".card-div4").classList.add("card-background");
+
         }, 3000);
     
     }  else if(randomCard == 4){
@@ -207,10 +226,13 @@ function matchingCard(randomCard){
         
         setTimeout(() => {       
             document.querySelector("#pc5").classList.add("run-pumping");
+            
         }, 1000);
 
         setTimeout(() => {
             document.querySelector("#pc5").remove();
+            document.querySelector(".card-div5").classList.add("card-background");
+
         }, 3000);
 
     }  else if(randomCard == 5){
@@ -222,6 +244,8 @@ function matchingCard(randomCard){
 
         setTimeout(() => {
             document.querySelector("#pc6").remove();
+            document.querySelector(".card-div6").classList.add("card-background");
+
         }, 3000);
 
     }  else if(randomCard == 6){
@@ -233,6 +257,8 @@ function matchingCard(randomCard){
 
         setTimeout(() => {
             document.querySelector("#pc7").remove();
+            document.querySelector(".card-div7").classList.add("card-background");
+
         }, 3000);
 
     }   else if(randomCard == 7){
@@ -244,6 +270,8 @@ function matchingCard(randomCard){
 
         setTimeout(() => {
             document.querySelector("#pc8").remove();
+            document.querySelector(".card-div8").classList.add("card-background");
+
         }, 3000);
 
     } else if(randomCard == 8){
@@ -255,6 +283,8 @@ function matchingCard(randomCard){
 
         setTimeout(() => {
             document.querySelector("#pc9").remove();
+            document.querySelector(".card-div9").classList.add("card-background");
+
         }, 3000);
 
     } else if(randomCard == 9){
@@ -265,6 +295,8 @@ function matchingCard(randomCard){
 
         setTimeout(() => {
             document.querySelector("#pc10").remove();
+            document.querySelector(".card-div10").classList.add("card-background");
+
         }, 3000);
 
     } else if(randomCard == 10){
@@ -276,6 +308,8 @@ function matchingCard(randomCard){
 
         setTimeout(() => {
             document.querySelector("#pc11").remove();
+            document.querySelector(".card-div11").classList.add("card-background");
+
         }, 3000);
 
     } else if(randomCard == 11){
@@ -286,6 +320,8 @@ function matchingCard(randomCard){
 
         setTimeout(() => {
             document.querySelector("#pc12").remove();
+            document.querySelector(".card-div12").classList.add("card-background");
+
         }, 3000);
     }
 }

@@ -108,14 +108,18 @@ button{
     img{
         width: 100%;
         justify-self: center;
-        padding: 5px;
+        padding: px;
     }
   
 }
 .card * {
-    height: 116px;
-    width: 116px;
+    height: 90px;
+    width: 90px;
     background-color: $silverblue;
+}
+.card-background{
+    background-color: $darkblue;
+    border-radius: 50%;
 }
 
 // animation class(will be add by javascript)
