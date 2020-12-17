@@ -136,6 +136,7 @@ button h3 {
   margin: auto;
   padding: 5px 5px 30px 5px;
   z-index: -1;
+  border-radius: 8px;
 }
 
 .card-title {
