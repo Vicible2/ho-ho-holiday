@@ -173,13 +173,18 @@ button h3 {
   width: 100%;
   -ms-grid-column-align: center;
       justify-self: center;
-  padding: 5px;
+  padding: px;
 }
 
 .card * {
-  height: 116px;
-  width: 116px;
+  height: 90px;
+  width: 90px;
   background-color: #E1F2F7;
+}
+
+.card-background {
+  background-color: #001B3D;
+  border-radius: 50%;
 }
 
 .run-pumping {
