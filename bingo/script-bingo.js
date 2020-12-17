@@ -44,7 +44,7 @@ function compare(randomCard){
 
     console.log("bingoArray: " + bingoArray);
 
-    //
+    
     //TODO: annouce the winning
 
     let winSound = document.getElementById("winning-audio");
@@ -62,10 +62,10 @@ function compare(randomCard){
 
         }, 3500);
 
-        document.querySelector("#pc1").classList.add("run-pumping");
-        document.querySelector("#pc2").classList.add("run-pumping");
-        document.querySelector("#pc3").classList.add("run-pumping");
-        document.querySelector("#pc4").classList.add("run-pumping");
+        // document.querySelector("#pc1").classList.add("run-pumping");
+        // document.querySelector("#pc2").classList.add("run-pumping");
+        // document.querySelector("#pc3").classList.add("run-pumping");
+        // document.querySelector("#pc4").classList.add("run-pumping");
 
         winGame();
 
@@ -81,10 +81,10 @@ function compare(randomCard){
 
         }, 3500);
 
-        document.querySelector("#pc5").classList.add("run-pumping");
-        document.querySelector("#pc6").classList.add("run-pumping");
-        document.querySelector("#pc7").classList.add("run-pumping");
-        document.querySelector("#pc8").classList.add("run-pumping");
+        // document.querySelector("#pc5").classList.add("run-pumping");
+        // document.querySelector("#pc6").classList.add("run-pumping");
+        // document.querySelector("#pc7").classList.add("run-pumping");
+        // document.querySelector("#pc8").classList.add("run-pumping");
 
         winGame();
         
@@ -99,10 +99,10 @@ function compare(randomCard){
             document.querySelector("#pc11").style.backgroundColor = "#001B3D";
             document.querySelector("#pc12").style.backgroundColor = "#001B3D";
         }, 3500);
-        document.querySelector("#pc9").classList.add("run-pumping");
-        document.querySelector("#pc10").classList.add("run-pumping");
-        document.querySelector("#pc11").classList.add("run-pumping");
-        document.querySelector("#pc12").classList.add("run-pumping");
+        // document.querySelector("#pc9").classList.add("run-pumping");
+        // document.querySelector("#pc10").classList.add("run-pumping");
+        // document.querySelector("#pc11").classList.add("run-pumping");
+        // document.querySelector("#pc12").classList.add("run-pumping");
 
         winGame();
         
@@ -119,11 +119,10 @@ function winGame(){
 
     pickCardBtn.style.display = "none";
 
-  
+   
 
-        setTimeout(() => {
-            replayDivLocation.style.display = "block";
-        }, 4000);
+    //TODO: replay btn not show up
+        setTimeout(() => {  replayDivLocation.style.display = "block"; }, 2000);
         
 }
 
