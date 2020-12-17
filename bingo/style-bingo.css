@@ -107,9 +107,10 @@ button h3 {
   height: 60%;
   padding: 0;
   opacity: .9;
+  z-index: 100;
 }
 
-#replay {
+#replay, #replay-win {
   position: absolute;
   top: 40%;
   border: 2px solid #F5D3A0;
@@ -122,7 +123,7 @@ button h3 {
   outline: none;
 }
 
-#replay h1 {
+#replay h1, #replay-win h1 {
   color: #001B3D;
   font-size: 80px;
   font-weight: 800;
@@ -131,9 +132,9 @@ button h3 {
 
 .player-card {
   background-color: #B7D4FC;
-  width: 90%;
+  width: 80%;
   margin: auto;
-  padding: 5px;
+  padding: 5px 5px 30px 5px;
   z-index: -1;
 }
 
@@ -157,7 +158,7 @@ button h3 {
 }
 
 .card {
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #E1F2F7;
   width: 80%;
   margin: auto;
@@ -172,6 +173,7 @@ button h3 {
   width: 100%;
   -ms-grid-column-align: center;
       justify-self: center;
+  padding: 5px;
 }
 
 .card * {

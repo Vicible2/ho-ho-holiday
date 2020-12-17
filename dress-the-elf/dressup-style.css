@@ -1,0 +1,39 @@
+main{
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    margin-bottom: -150px;
+}
+
+#elf{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+#container-game{
+    width: 500px;
+    height: 500px;
+    background-color: #F5D3A0;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.container{
+    background-color: #E1F2F7;
+    width: 1000px;
+    height: 575px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wraper{
+    width: 500px;
+    height: 500px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+}

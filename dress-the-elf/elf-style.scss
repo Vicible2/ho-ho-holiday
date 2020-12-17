@@ -1,0 +1,39 @@
+@import "../common-css/style-common.scss";
+
+main{
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  margin-bottom: -150px;
+}
+
+#elf{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+
+#container-game{
+  width: 500px;
+  height: 500px;
+  background-color: $yellow ;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.container{
+  background-color: $silverblue;
+  width: 1000px;
+  height: 575px;
+  display: flex;
+  justify-content: center;
+}
+
+#wraper{
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}

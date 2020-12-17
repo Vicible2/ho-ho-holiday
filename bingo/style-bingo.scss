@@ -51,8 +51,9 @@ button{
     height: 60%;
     padding: 0;
     opacity: .9;
+    z-index: 100;
 }
-#replay{
+#replay, #replay-win{
     position: absolute;
     top: 40%;
     border: 2px solid $yellow;
@@ -74,9 +75,9 @@ button{
 
 .player-card{
     background-color: $medblue;
-    width: 90%;
+    width: 80%;
     margin:auto;
-    padding: 5px;
+    padding: 5px 5px 30px 5px;
     z-index: -1;
 }
 
@@ -96,7 +97,7 @@ button{
 }
 
 .card{
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: $silverblue;
     width: 80%;
     //height: 680px;
@@ -109,6 +110,7 @@ button{
     img{
         width: 100%;
         justify-self: center;
+        padding: 5px;
         
     }
   
