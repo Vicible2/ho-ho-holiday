@@ -1,71 +1,42 @@
-@import "./common-css/style-common.css"; 
-/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"); */
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+/* copy of common style sheet */
 body {
-    background-color: #001B3D;
-    margin: 0;
-    padding: 0px;
-    position: relative;
-    padding-bottom: 20%;
-    min-height: 100vh;
-  }
-
-
-
-main {
-    padding-top:100px;
-    text-align: center;
-    width: 100%;
-
+  background-color: #001B3D;
+  margin: 0;
+  padding: 0px;
+  position: relative;
+  padding-bottom: 20%;
+  min-height: 100vh;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}
+h1, h2, h3, h4, h5 {
+  font-family: "Amatic SC", cursive;
+  color: #E1F2F7;
+}
+p {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #E1F2F7;
+  margin: 0;
 }
 
-#submit {
-    /* font-size: 30px; makes the page shake ? */ 
-    border-radius: 15px;
+.navbar-brand {
+  padding-left: 30px;
 }
 
-.collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
-  
-  .collapsible:hover {
-    background-color: #555;
-  }
-  
-  .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-  }
-
-
-img[title]{
-opacity: 0;
-transition: opacity 230ms ease-in-out;
-animation-iteration-count : infinite;
-animation-name:myanimation;
-position: relative;
-width: 50px;
-animation-duration: 8s/*duration*/ ;
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 10px;
+  color: #E1F2F7;
+  font-size: 20px;
 }
 
-
-@keyframes mysleigh{
-   
-    from{transform : translateY(0)}
-    to{transform: translateY(500px)}
-
-
+.nav-link:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .footer-image {
@@ -79,124 +50,34 @@ animation-duration: 8s/*duration*/ ;
 }
 
 
-
-
-img[title] {
-  opacity: 0;
-  -webkit-transition: opacity 230ms ease-in-out;
-  transition: opacity 230ms ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-name: myanimation;
-          animation-name: myanimation;
-  position: relative;
-  width: 50px;
-  -webkit-animation-duration: 8s;
-          animation-duration: 8s;
+/* css for gift generator start here */
+main {
+        padding-top:100px;
+        text-align: center;
+        width: 100%;
 }
 
-
-img[target=one] {
-  -webkit-animation-name: mysleigh;
-          animation-name: mysleigh;
-  -webkit-animation-duration: 50s;
-          animation-duration: 50s;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-  position: absolute;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  top: -20px;
-  height: 60px;
-  -webkit-transition: width 2s, height 4s;
-  transition: width 2s, height 4s;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
 }
 
-img[target=two] {
-  -webkit-animation-name: mysleigh;
-          animation-name: mysleigh;
-  -webkit-animation-duration: 70s;
-          animation-duration: 70s;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-  position: absolute;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  left: 180px;
+.collapsible:hover {
+background-color: #555;
 }
 
-img[target=three] {
-  -webkit-animation-name: mysleigh;
-          animation-name: mysleigh;
-  -webkit-animation-duration: 40s;
-          animation-duration: 40s;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-  position: absolute;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  right: 22px;
-  top:80px;
-  height: 60px;
-}
-
-img[target=four] {
-  -webkit-animation-name: mysleigh;
-          animation-name: mysleigh;
-  -webkit-animation-duration: 62s;
-          animation-duration: 62s;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-  position: absolute;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  left: 50px;
-  height: 50px;
-  /* bottom: 20px; */
-  -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);
-          animation-timing-function: cubic-bezier(0, 0, 1, 1);
-}
-
-img[target=five] {
-  -webkit-animation-name: mysleigh;
-          animation-name: mysleigh;
-  -webkit-animation-duration: 92s;
-          animation-duration: 92s;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-  position: absolute;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  top: 250px;
-  height: 40px;
-  left: 40px;
-}
-
-img[target=six] {
-  -webkit-animation-name: mysleigh;
-          animation-name: mysleigh;
-  -webkit-animation-duration: 32s;
-          animation-duration: 32s;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-  position: absolute;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  right: 10px;
-  height: 50px;
-}
-
-
-h1 {
-  font-family: "Amatic SC", cursive;
-  color: #E1F2F7;
-}
-
-p {
-  font-family: "Amatic SC", cursive;
-  color: #E1F2F7;
+.content {
+padding: 0 18px;
+display: none;
+overflow: hidden;
+background-color: #f1f1f1;
 }
 
 #myform {
@@ -204,9 +85,55 @@ p {
   margin: 10px;
   font-size: 50px;
 }
+.big-image{
+        width: 200px;
+        margin: auto;
+        margin-bottom: 20px;
 
-.button {
-  padding: 10px;
-  margin: 10px;
-  font-size: 50px;
 }
+#gift{
+        opacity: .9;
+        max-width: 100%;
+        max-height: 100%;
+        display: block; /* remove extra space below image */
+}
+input{
+        width: 30%;
+        text-align: center;
+        background-color: #E1F2F7;
+        outline:none;
+        padding: 15px 40px;
+        margin: 30px 0 10px 0;
+        border-radius: 5px;
+}
+
+button{
+
+        border-radius: 8px;
+  border: 2px solid #F5D3A0;
+  outline: none;
+  background: #F5D3A0;
+  /* width: 200px;
+  height: 60px; */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  justify-self: center;
+  margin: 30px;
+}
+button h3{
+        color:#001B3D;
+        font-weight: 900;
+        font-size: 40px; 
+}
+
+select{
+        width: 20%;
+        text-align: center;
+        background-color: #B7D4FC;
+        outline:none;
+        padding: 10px 30px;
+        margin: 10px 0;
+        border-radius: 5px;  
+}
+
