@@ -188,7 +188,8 @@ a{
 
 }
 .game-image{
-    width: 300px;
+    width: 400px;
+    opacity: .9;
     grid-row: 2/3;
     grid-column: 1/2;
 }
@@ -255,7 +256,8 @@ a{
     
 }
 .game-image-two{
-    width: 300px;
+    width: 400px;
+    opacity: .9;
     grid-row: 2/3;
     grid-column: 3/4;
 }
@@ -314,7 +316,8 @@ a{
 
 }
 .game-image-three{
-    width: 300px;
+    width: 400px;
+    opacity: .9;
     grid-row: 2/3;
     grid-column: 1/2;
 }
@@ -384,7 +387,8 @@ a{
     
 }
 .game-image-four{
-    width: 300px;
+    width: 400px;
+    opacity: .9;
     grid-row: 2/3;
     grid-column: 3/4;
 }
@@ -407,7 +411,7 @@ a{
         height: auto;
         grid-template-columns: 90%;
         grid-template-rows: 30% 70%;
-        padding: 20px 0;
+        padding: 100px 0 20px 0;
         img{
             grid-row:1/2 ;
         }
@@ -416,7 +420,7 @@ a{
         height: auto;
         grid-template-columns: 90%;
         grid-template-rows: 10% 40% 50%;
-        padding: 30px 0;
+        padding: 30px 0 100px 0;
         grid-gap: 5px;
         margin: auto;
     }
@@ -433,7 +437,7 @@ a{
         height: auto;
         grid-template-columns: 70%;
         grid-template-rows: 10% 40% 50%;
-        padding: 30px 0;
+        padding:  30px 0 100px 0;
         grid-gap: 5px;
         margin: auto;
         width: 100%;
@@ -457,7 +461,7 @@ a{
         height: auto;
         grid-template-columns: 90%;
         grid-template-rows: 10% 40% 50%;
-        padding: 30px 0;
+        padding:  30px 0 100px 0;
         grid-gap: 5px;
         margin: auto;
     }
@@ -474,7 +478,7 @@ a{
         height: auto;
         grid-template-columns: 70%;
         grid-template-rows: 10% 40% 50%;
-        padding: 30px 0;
+        padding:  30px 0 100px 0;
         grid-gap: 5px;
         margin: auto;
         width: 100%;

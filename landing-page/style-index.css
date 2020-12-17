@@ -337,7 +337,8 @@ a {
 }
 
 .game-image {
-  width: 300px;
+  width: 400px;
+  opacity: .9;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -424,7 +425,8 @@ a {
 }
 
 .game-image-two {
-  width: 300px;
+  width: 400px;
+  opacity: .9;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -509,7 +511,8 @@ a {
 }
 
 .game-image-three {
-  width: 300px;
+  width: 400px;
+  opacity: .9;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -596,7 +599,8 @@ a {
 }
 
 .game-image-four {
-  width: 300px;
+  width: 400px;
+  opacity: .9;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -620,7 +624,7 @@ a {
         grid-template-columns: 90%;
     -ms-grid-rows: 30% 70%;
         grid-template-rows: 30% 70%;
-    padding: 20px 0;
+    padding: 100px 0 20px 0;
   }
   .landingsection img {
     -ms-grid-row: 1;
@@ -633,7 +637,7 @@ a {
         grid-template-columns: 90%;
     -ms-grid-rows: 10% 40% 50%;
         grid-template-rows: 10% 40% 50%;
-    padding: 30px 0;
+    padding: 30px 0 100px 0;
     grid-gap: 5px;
     margin: auto;
   }
@@ -657,7 +661,7 @@ a {
         grid-template-columns: 70%;
     -ms-grid-rows: 10% 40% 50%;
         grid-template-rows: 10% 40% 50%;
-    padding: 30px 0;
+    padding: 30px 0 100px 0;
     grid-gap: 5px;
     margin: auto;
     width: 100%;
@@ -694,7 +698,7 @@ a {
         grid-template-columns: 90%;
     -ms-grid-rows: 10% 40% 50%;
         grid-template-rows: 10% 40% 50%;
-    padding: 30px 0;
+    padding: 30px 0 100px 0;
     grid-gap: 5px;
     margin: auto;
   }
@@ -718,7 +722,7 @@ a {
         grid-template-columns: 70%;
     -ms-grid-rows: 10% 40% 50%;
         grid-template-rows: 10% 40% 50%;
-    padding: 30px 0;
+    padding: 30px 0 100px 0;
     grid-gap: 5px;
     margin: auto;
     width: 100%;
