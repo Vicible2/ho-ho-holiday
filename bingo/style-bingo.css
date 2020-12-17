@@ -81,7 +81,7 @@ button h3 {
   display: grid;
   -ms-grid-columns: 30% 70%;
       grid-template-columns: 30% 70%;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   width: 90vw;
   margin: auto;
 }
@@ -89,11 +89,12 @@ button h3 {
 .computer-card {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 70% 30%;
-      grid-template-rows: 70% 30%;
+  -ms-grid-rows: 60% 20% 20%;
+      grid-template-rows: 60% 20% 20%;
   padding: 30px;
   -ms-grid-column-align: center;
       justify-self: center;
+  text-align: center;
 }
 
 .computer-card img {
@@ -178,8 +179,8 @@ button h3 {
 }
 
 .card * {
-  height: 90px;
-  width: 90px;
+  height: 130px;
+  width: 130px;
 }
 
 .run-pumping {
