@@ -107,22 +107,17 @@ body {
   z-index: 1000;
 }
 
-.sound {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-top: 2vh;
-  padding: 1vh;
-}
-
-.sound .muteButton {
-  background-image: url(../assets/volume.png);
-  background-size: cover;
-  width: 25px;
-  height: 25px;
-}
+/* .sound {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vh;
+    padding: 1vh;
+    .muteButton {
+        background-image: url(../assets/volume.png);
+        background-size: cover;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+}*/
 /*# sourceMappingURL=running-style.css.map */

@@ -23,7 +23,7 @@ document.addEventListener('keyup', function (evt) {
 
 // Classes
 class Player {
-  constructor (x, y, w, h, c) {
+  constructor(x, y, w, h, c) {
     // xAxis, yAxis, width, height, color
     this.x = x;
     this.y = y;
@@ -31,15 +31,15 @@ class Player {
     this.h = h;
     this.c = c;
 
-    this.dy = 0;  //direction y-Force
+    this.dy = 0; //direction y-Force
     this.jumpForce = 15;
-    this.originalHeight = h;  //reference for normal playerHeight (ducking wil have to reset after shrink)
+    this.originalHeight = h; //reference for normal playerHeight (ducking wil have to reset after shrink)
     this.grounded = false;
     this.jumpTimer = 0;
   }
 
-  Animate () {
-     //Jump animation
+  Animate() {
+    //Jump animation
     if (keys['Space'] || keys['KeyW']) {
       this.Jump();
     } else {
@@ -68,7 +68,7 @@ class Player {
     this.Draw();
   }
 
-  Jump () {
+  Jump() {
     if (this.grounded && this.jumpTimer == 0) {
       this.jumpTimer = 1;
       this.dy = -this.jumpForce;
@@ -78,19 +78,19 @@ class Player {
     }
   }
 
-/* drawImage() {
+  /* drawImage() {
 
-        avatar.src = "../assets/sprites/santa-idle.gif"
-        img.addEventListener('Load', () => {
-            for (let imgX = 10; imgX < 200; imgX +=30) {
-                context.drawImage(avatar, imgX, 10);
-            }
-        })
-    }*/
+          avatar.src = "../assets/sprites/santa-idle.gif"
+          img.addEventListener('Load', () => {
+              for (let imgX = 10; imgX < 200; imgX +=30) {
+                  context.drawImage(avatar, imgX, 10);
+              }
+          })
+      }*/
 
 
 
-  Draw () { //draw function to create basic rectangle that is the player (will be replace with pixelAvatar later)
+  Draw() { //draw function to create basic rectangle that is the player (will be replace with pixelAvatar later)
     ctx.beginPath();
     ctx.fillStyle = this.c;
     ctx.fillRect(this.x, this.y, this.w, this.h);
@@ -100,7 +100,7 @@ class Player {
 }
 
 class Obstacle {
-  constructor (x, y, w, h, c) {
+  constructor(x, y, w, h, c) {
     this.x = x;
     this.y = y;
     this.w = w;
@@ -111,13 +111,13 @@ class Obstacle {
     this.dx = -gameSpeed;
   }
 
-  Update () {
+  Update() {
     this.x += this.dx;
     this.Draw();
     this.dx = -gameSpeed;
   }
 
-  Draw () {
+  Draw() {
     ctx.beginPath();
     ctx.fillStyle = this.c;
     ctx.fillRect(this.x, this.y, this.w, this.h);
@@ -126,7 +126,7 @@ class Obstacle {
 }
 
 class Text {
-  constructor (t, x, y, a, c, s) {
+  constructor(t, x, y, a, c, s) {
     this.t = t;
     this.x = x;
     this.y = y;
@@ -135,7 +135,7 @@ class Text {
     this.s = s;
   }
 
-  Draw () {
+  Draw() {
     ctx.beginPath();
     ctx.fillStyle = this.c;
     ctx.font = this.s + "px sans-serif";
@@ -146,7 +146,7 @@ class Text {
 }
 
 // Game Functions
-function SpawnObstacle () {
+function SpawnObstacle() {
   let size = RandomIntInRange(20, 70);
   //obstacleType 0 or 1, 0 = ground type, 1 is flying type
   let type = RandomIntInRange(0, 1);
@@ -159,13 +159,13 @@ function SpawnObstacle () {
 }
 
 //RandomInteger to define obstacle size & type
-function RandomIntInRange (min, max) {
+function RandomIntInRange(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
 
 //initialize function so all variables are at default values.
-function Start () {
+function Start() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
@@ -188,21 +188,22 @@ function Start () {
   highscoreText = new Text("Highscore: " + highscore, canvas.width - 25, 25, "right", "#E1F2F7", "20");
 
   requestAnimationFrame(Update);
-   // player.Draw(); call draw function to create rectangle
+  // player.Draw(); call draw function to create rectangle
 }
 
 let initialSpawnTimer = 200;
 let spawnTimer = initialSpawnTimer;
-function Update () {
+
+function Update() {
   requestAnimationFrame(Update); //once called (see Start function) we want to keep repeating this so it seems animated
-  ctx.clearRect(0, 0, canvas.width, canvas.height);  //if we don't clear our canvas every frame we will keep drawing the same over & over again
+  ctx.clearRect(0, 0, canvas.width, canvas.height); //if we don't clear our canvas every frame we will keep drawing the same over & over again
 
   spawnTimer--;
   if (spawnTimer <= 0) {
     SpawnObstacle();
     console.log(obstacles);
     spawnTimer = initialSpawnTimer - gameSpeed * 8;
-    
+
     if (spawnTimer < 60) {
       spawnTimer = 60;
     }
@@ -243,15 +244,15 @@ function Update () {
     highscore = score;
     highscoreText.t = "Highscore: " + highscore;
   }
-  
+
   highscoreText.Draw();
 
   gameSpeed += 0.0002;
 }
 // Window resize to keep background-responsive
 window.addEventListener('resize', () => {
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
 })
 
 Start();
