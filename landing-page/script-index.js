@@ -1,14 +1,17 @@
+let facebookBtn = document.querySelector(".facebook-btn");
+let whatsappBtn = document.querySelector(".whatsapp-btn");
+let emailBtn = document.querySelector(".email-btn");
+let twitterBtn = document.querySelector(".twitter-btn");
 
-//typing effect function 
- let typing = document.querySelector(".typing");
- let text = typing.innerHTML;
+let typing = document.querySelector(".typing");
+let text = typing.innerHTML;
 
  typing.innerHTML = "";
 
  //IF PUT IT I=0 INSIDE if ,THE FIRST LETTER WILL BE MISSING
  let i = 0;
-
-typingEffect = () => {
+//typing effect function 
+(typingEffect = () => {
         
     if (i < text.length){
 
@@ -24,24 +27,23 @@ typingEffect = () => {
 
          setTimeout(typingEffect, delay);
      }
- };
- typingEffect();
+})();
 
     
 //function for the snowflake
 getRandom = (min, max) => {
     return Math.random() * (max - min) + min;
-  }
+};
   
-  (letItSnow = () => {
-    var snowflakes = document.querySelectorAll('.snow');
-    for (var i = 0; i < snowflakes.length; i++) {
-      var snowflake = snowflakes[i];
-      snowflake.setAttribute('cx', getRandom(1,100) + '%');
-      snowflake.setAttribute('cy', '-' + getRandom(1,100));
-      snowflake.setAttribute('r', getRandom(1,3));
-    }
-  })();
+(letItSnow = () => {
+  var snowflakes = document.querySelectorAll('.snow');
+  for (var i = 0; i < snowflakes.length; i++) {
+    var snowflake = snowflakes[i];
+    snowflake.setAttribute('cx', getRandom(1,100) + '%');
+    snowflake.setAttribute('cy', '-' + getRandom(1,100));
+    snowflake.setAttribute('r', getRandom(1,3));
+  }
+})();
 
 //function for text appear
 appearText = () =>{
@@ -73,6 +75,30 @@ appearText = () =>{
 }
 window.addEventListener("scroll", appearText);
 
+//ShareSection function
+(ShareSite = () => {
+ 
+  let postUrl = encodeURI(document.location.href);
+  let postTitle = encodeURI("Some Fun For the Holiday?");
 
+  facebookBtn.setAttribute(
+    "href",
+    `https://www.facebook.com/sharer.php?u=${postUrl}`
+  );
 
+  twitterBtn.setAttribute(
+    "href",
+    `https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+  );
+
+  emailBtn.setAttribute(
+    "href",
+    `mailto:?subject=I wanted you to see this site&amp;body=${postTitle} ${postUrl}`
+  );
+
+  whatsappBtn.setAttribute(
+    "href",
+    `https://wa.me/?text=${postTitle} ${postUrl}`
+  );
+})();
 
