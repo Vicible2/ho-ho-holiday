@@ -12,6 +12,11 @@ let obstacles = [];
 let gameSpeed;
 let keys = {};
 
+const santaImage = new Image();
+
+
+
+
 // Event Listeners
 document.addEventListener('keydown', function (evt) {
   keys[evt.code] = true;
@@ -38,7 +43,7 @@ class Player {
     this.jumpTimer = 0;
   }
 
-  Animate() {
+  animate() {
     //Jump animation
     if (keys['Space'] || keys['KeyW']) {
       this.Jump();
@@ -65,7 +70,7 @@ class Player {
       this.y = canvas.height - this.h;
     }
 
-    this.Draw();
+    this.draw();
   }
 
   Jump() {
@@ -90,13 +95,17 @@ class Player {
 
 
 
-  Draw() { //draw function to create basic rectangle that is the player (will be replace with pixelAvatar later)
+
+  draw() { //draw function to create basic rectangle that is the player (will be replace with pixelAvatar later)
     ctx.beginPath();
     ctx.fillStyle = this.c;
     ctx.fillRect(this.x, this.y, this.w, this.h);
     ctx.closePath();
+    drawSanta();
     // context.drawImage(character, 0, 0, canvas.width, canvas.height);
+
   }
+
 }
 
 class Obstacle {
@@ -111,13 +120,13 @@ class Obstacle {
     this.dx = -gameSpeed;
   }
 
-  Update() {
+  update() {
     this.x += this.dx;
-    this.Draw();
+    this.draw();
     this.dx = -gameSpeed;
   }
 
-  Draw() {
+  draw() {
     ctx.beginPath();
     ctx.fillStyle = this.c;
     ctx.fillRect(this.x, this.y, this.w, this.h);
@@ -135,7 +144,7 @@ class Text {
     this.s = s;
   }
 
-  Draw() {
+  draw() {
     ctx.beginPath();
     ctx.fillStyle = this.c;
     ctx.font = this.s + "px sans-serif";
@@ -162,10 +171,25 @@ function SpawnObstacle() {
 function RandomIntInRange(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
+let streetHeight = 30;
 
+
+drawSanta = () => {
+  
+  let santaY = canvas.height - santaImage.height - streetHeight;
+  console.log(santaY);
+  ctx.drawImage(santaImage, 0, 0, 100, 100, 250, santaY, 200, 200)
+}
 
 //initialize function so all variables are at default values.
 function Start() {
+
+  //Image sprite test
+  santaImage.src = "./assets/sprites/santa-idle.gif"
+  santaImage.onload = () => {
+    drawSanta();
+  }
+
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
@@ -181,21 +205,21 @@ function Start() {
   if (localStorage.getItem('highscore')) {
     highscore = localStorage.getItem('highscore');
   }
-
+  //TODO make player spawn responsive
   player = new Player(250, 0, 50, 50, '#FF5858');
 
   scoreText = new Text("Score: " + score, 25, 25, "left", "#E1F2F7", "20");
   highscoreText = new Text("Highscore: " + highscore, canvas.width - 25, 25, "right", "#E1F2F7", "20");
 
-  requestAnimationFrame(Update);
-  // player.Draw(); call draw function to create rectangle
+  requestAnimationFrame(update);
+  // player.draw(); call draw function to create rectangle
 }
 
 let initialSpawnTimer = 200;
 let spawnTimer = initialSpawnTimer;
 
-function Update() {
-  requestAnimationFrame(Update); //once called (see Start function) we want to keep repeating this so it seems animated
+function update() {
+  requestAnimationFrame(update); //once called (see Start function) we want to keep repeating this so it seems animated
   ctx.clearRect(0, 0, canvas.width, canvas.height); //if we don't clear our canvas every frame we will keep drawing the same over & over again
 
   spawnTimer--;
@@ -231,21 +255,21 @@ function Update() {
       window.localStorage.setItem('highscore', highscore);
     }
 
-    o.Update();
+    o.update();
   }
 
-  player.Animate();
+  player.animate();
 
   score++;
   scoreText.t = "Score: " + score;
-  scoreText.Draw();
+  scoreText.draw();
 
   if (score > highscore) {
     highscore = score;
     highscoreText.t = "Highscore: " + highscore;
   }
 
-  highscoreText.Draw();
+  highscoreText.draw();
 
   gameSpeed += 0.0002;
 }
