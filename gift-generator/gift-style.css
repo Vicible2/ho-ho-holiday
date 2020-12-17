@@ -14,7 +14,33 @@ main {
 
 }
 
+#submit {
+    /* font-size: 30px; makes the page shake ? */ 
+    border-radius: 15px;
+}
 
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
 
 
 img[title]{
@@ -30,8 +56,8 @@ animation-duration: 8s/*duration*/ ;
 
 @keyframes mysleigh{
    
-    from{transform : translateX(0)}
-    to{transform: translateX(500px)}
+    from{transform : translateY(0)}
+    to{transform: translateY(500px)}
 
 
 }
@@ -45,6 +71,7 @@ animation-duration: 8s/*duration*/ ;
   -o-object-fit: contain;
      object-fit: contain;
 }
+
 
 
 
@@ -74,6 +101,7 @@ img[target=one] {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   top: -20px;
+  height: 60px;
   -webkit-transition: width 2s, height 4s;
   transition: width 2s, height 4s;
   -webkit-animation-timing-function: ease-in;
@@ -90,7 +118,7 @@ img[target=two] {
   position: absolute;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  left: 50px;
+  left: 180px;
 }
 
 img[target=three] {
@@ -103,8 +131,9 @@ img[target=three] {
   position: absolute;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  right: 0px;
-  bottom: 30px;
+  right: 22px;
+  top:80px;
+  height: 60px;
 }
 
 img[target=four] {
@@ -117,8 +146,9 @@ img[target=four] {
   position: absolute;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  left: 100px;
-  bottom: 20px;
+  left: 50px;
+  height: 50px;
+  /* bottom: 20px; */
   -webkit-animation-timing-function: cubic-bezier(0, 0, 1, 1);
           animation-timing-function: cubic-bezier(0, 0, 1, 1);
 }
@@ -133,7 +163,9 @@ img[target=five] {
   position: absolute;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  top: 200px;
+  top: 250px;
+  height: 40px;
+  left: 40px;
 }
 
 img[target=six] {
@@ -146,8 +178,8 @@ img[target=six] {
   position: absolute;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  right: 100px;
-  bottom: 20px;
+  right: 10px;
+  height: 50px;
 }
 
 

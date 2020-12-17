@@ -1,4 +1,4 @@
-let nameLists=["selin","bert","luisa","mike","harry"];
+let nameLists=[];
 let inputNames=document.getElementById("names");
 
 
@@ -8,51 +8,49 @@ document.getElementById("submit").addEventListener("click", (event) => {
     nameLists.push(inputNames.value);
     console.log(nameLists);
 
-    //here need to pair names randomly 
-
-
-
-
+   
 
 });
 
 document.getElementById("result").addEventListener("click", () => {
 
  document.getElementById("inputpeople").style.display="none";
- document.getElementById("outputText").innerHTML=nameLists;
+ document.getElementById("outputText").innerHTML="Here is your dearest people :"+ nameLists;
 
- 
 
-let pair = function(letsPairUp) {
+    let pair = function (letsPairUp) {
     
-    let pairs = [];
-    let recipients = letsPairUp.slice();
+    
+    let pairs = [];//empty array to put paired names
+    let recipients = letsPairUp.slice(); // variable to divide all the names one by one 
 
-    for (let i = 0; i < letsPairUp.length; i++) {
+    // var winner = letsPairUp[Math.floor(Math.random()*letsPairUp.length)];
+    // console.log(winner);
 
-        let sender = letsPairUp[i];		
-        let recipientIndex = Math.floor(Math.random() * recipients.length);
-        console.log(recipientIndex);
+    for (let i = 0; i < letsPairUp.length; i++) { //loop through the names that are sliced
 
-        while (recipients[recipientIndex] === sender) {
-        // Can't send gift to myself
-        recipientIndex = Math.floor(Math.random() * recipients.length);
-        }
+        let sender = letsPairUp[i];		// var to get the index of people
+        let recipientIndex = Math.floor(Math.random() * recipients.length); //var to randomly get the number of divided people's 
+
+    while (recipients[recipientIndex] === sender) { // divided people's random number is equal to sender!! Can't send gift to myself
+
+        recipientIndex = Math.floor(Math.random() * recipients.length); // not sure why its repeated as line 34
+    }
 
         let recipient = recipients.splice(recipientIndex, 1)[0];
         pairs.push({sender: sender,receiver: recipient});
-    }
-    document.getElementById("yourpair").innerHTML=pairs;
 
+        document.getElementById("yourpair").innerHTML= sender +" "+ "Prepare your surprise for " + " "  + recipient;
+
+    }
+    
     return pairs;
     };
 
-// 
 console.log(pair(nameLists));
 
 
 });
-//TODO: pairing all the names -->random method
 
 
 
