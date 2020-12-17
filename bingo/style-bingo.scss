@@ -42,7 +42,7 @@ button{
         width: 200px;
     }
 }
-.replay-btn-div{
+.replay-btn-div-win, .replay-btn-div-lose{
     display: none;
     
     position: absolute;
@@ -56,8 +56,8 @@ button{
     position: absolute;
     top: 40%;
     border: 2px solid $yellow;
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
     background-color: $yellow;
     border-radius: 50%;
     right: 40%;
@@ -74,7 +74,7 @@ button{
 
 .player-card{
     background-color: $medblue;
-    width: 80%;
+    width: 90%;
     margin:auto;
     padding: 5px;
     z-index: -1;
@@ -98,33 +98,30 @@ button{
 .card{
     border-radius: 5px;
     background-color: $silverblue;
-    width: 95%;
+    width: 80%;
     //height: 680px;
     margin:auto;
     display: grid;
     grid-template-columns: repeat(4, 25%);
     justify-items: center;
-    padding: 10px;
+    //padding: 10px;
+    //grid-gap: 5px;
     img{
         width: 100%;
         justify-self: center;
-        padding: px;
+        
     }
   
 }
 .card * {
     height: 90px;
     width: 90px;
-    background-color: $silverblue;
 }
-.card-background{
-    background-color: $darkblue;
-    border-radius: 50%;
-}
+
 
 // animation class(will be add by javascript)
 .run-pumping {
-    animation: pumping 2.5s alternate 2 ease-in;
+    animation: pumping 2s alternate 1 ease-in;
 }
 
 .run-animation {

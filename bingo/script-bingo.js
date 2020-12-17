@@ -4,7 +4,8 @@
 let pickCardBtn = document.querySelector("#get-card-btn");
 let replayBtn = document.getElementById("replay");
 
-let replayDivLocation = document.querySelector(".replay-btn-div");
+let winDivLocation = document.querySelector(".replay-btn-div-win");
+let loseDivLocation = document.querySelector(".replay-btn-div-lose");
 
 let cardLocation = document.querySelector("#computer-card-image");
 let drawCounterLocation = document.querySelector("#remaining-draw");
@@ -18,8 +19,7 @@ let bingoArray = [];
 getCard = () => {
 
         let randomCard = Math.floor(Math.random() * Math.floor(cards.length));;
-    // console.log(randomCard);
-    // console.log("type of random card: "+typeof randomCard);
+
 
     cardLocation.src = "./img/snowflake.png";
     //to show the computer card
@@ -53,43 +53,14 @@ function compare(randomCard){
         console.log("first row");
         winSound.play();
 
-        setTimeout(() => {
-            // document.querySelector(".card-div1").style.backgroundColor = "#001B3D";
-
-            // document.querySelector(".card-div2").style.backgroundColor = "#001B3D";
-            // document.querySelector(".card-div3").style.backgroundColor = "#001B3D";
-            // document.querySelector(".card-div4").style.backgroundColor = "#001B3D";
-
-            winSound.play();
-
-
-        }, 3500);
-
-        // document.querySelector("#pc1").classList.add("run-pumping");
-        // document.querySelector("#pc2").classList.add("run-pumping");
-        // document.querySelector("#pc3").classList.add("run-pumping");
-        // document.querySelector("#pc4").classList.add("run-pumping");
+        setTimeout(() => { winSound.play();}, 4000);
 
         winGame();
 
     } else if(bingoArray.includes(4) && bingoArray.includes(5) && bingoArray.includes(6) && bingoArray.includes(7)){
         console.log("second row");
 
-        setTimeout(() => {
-            // document.querySelector(".card-div5").style.backgroundColor = "#001B3D";
-            // document.querySelector(".card-div6").style.backgroundColor = "#001B3D";
-            // document.querySelector(".card-div7").style.backgroundColor = "#001B3D";
-            // document.querySelector(".card-div8").style.backgroundColor = "#001B3D";
-
-            winSound.play();
-
-
-        }, 3500);
-
-        // document.querySelector("#pc5").classList.add("run-pumping");
-        // document.querySelector("#pc6").classList.add("run-pumping");
-        // document.querySelector("#pc7").classList.add("run-pumping");
-        // document.querySelector("#pc8").classList.add("run-pumping");
+        setTimeout(() => { winSound.play();}, 4000);
 
         winGame();
         
@@ -98,18 +69,7 @@ function compare(randomCard){
         console.log("third row");
         
 
-        setTimeout(() => {
-            // document.querySelector(".card-div-9").style.backgroundColor = "#001B3D";
-            // document.querySelector(".card-div-10").style.backgroundColor = "#001B3D";
-            // document.querySelector(".card-div-11").style.backgroundColor = "#001B3D";
-            // document.querySelector(".card-div-12").style.backgroundColor = "#001B3D";
-
-            winSound.play();
-        }, 3500);
-        // document.querySelector("#pc9").classList.add("run-pumping");
-        // document.querySelector("#pc10").classList.add("run-pumping");
-        // document.querySelector("#pc11").classList.add("run-pumping");
-        // document.querySelector("#pc12").classList.add("run-pumping");
+        setTimeout(() => { winSound.play(); }, 4500);
 
         winGame();
         
@@ -128,8 +88,7 @@ function winGame(){
 
    
 
-    //TODO: play again button come much faster than the sound
-        setTimeout(() => {  replayDivLocation.style.display = "block"; }, 2000);
+        setTimeout(() => {  winDivLocation.style.display = "block"; }, 4000);
         
 }
 
@@ -141,7 +100,7 @@ function loseGame(){
     drawCounterLocation.innerHTML = remaining;
  
     //TODO:change back to 10times after test
-    if (bingoArray.length == 50){
+    if (bingoArray.length == 3){
 
         console.log("20times");
         
@@ -157,7 +116,7 @@ function loseGame(){
         }, 3000);
 
         setTimeout(() => {
-            replayDivLocation.style.display = "block";
+            loseDivLocation.style.display = "block";
         }, 4000);
         
     
@@ -176,8 +135,8 @@ function matchingCard(randomCard){
 
         setTimeout(() => {
 
-            document.querySelector("#pc1").remove();
-            document.querySelector(".card-div1").classList.add("card-background");
+
+            document.querySelector("#pc1").src = "./img/oval.png";
 
         }, 3000);
 
@@ -189,9 +148,8 @@ function matchingCard(randomCard){
         }, 1000);
 
         setTimeout(() => {
-            document.querySelector("#pc2").remove();
-            document.querySelector(".card-div2").classList.add("card-background");
-
+            document.querySelector("#pc2").src = "./img/oval.png";
+        
         }, 3000);
 
     }  else if(randomCard == 2){
@@ -202,8 +160,7 @@ function matchingCard(randomCard){
         }, 1000);
 
         setTimeout(() => {
-            document.querySelector("#pc3").remove();
-            document.querySelector(".card-div3").classList.add("card-background");
+            document.querySelector("#pc3").src = "./img/oval.png";
 
         }, 3000);
 
@@ -216,8 +173,7 @@ function matchingCard(randomCard){
         }, 1000);
 
         setTimeout(() => {
-            document.querySelector("#pc4").remove();
-            document.querySelector(".card-div4").classList.add("card-background");
+            document.querySelector("#pc4").src = "./img/oval.png";
 
         }, 3000);
     
@@ -230,8 +186,7 @@ function matchingCard(randomCard){
         }, 1000);
 
         setTimeout(() => {
-            document.querySelector("#pc5").remove();
-            document.querySelector(".card-div5").classList.add("card-background");
+            document.querySelector("#pc5").src = "./img/oval.png";
 
         }, 3000);
 
@@ -243,8 +198,7 @@ function matchingCard(randomCard){
         }, 1000);
 
         setTimeout(() => {
-            document.querySelector("#pc6").remove();
-            document.querySelector(".card-div6").classList.add("card-background");
+            document.querySelector("#pc6").src = "./img/oval.png";
 
         }, 3000);
 
@@ -256,8 +210,7 @@ function matchingCard(randomCard){
         }, 1000);
 
         setTimeout(() => {
-            document.querySelector("#pc7").remove();
-            document.querySelector(".card-div7").classList.add("card-background");
+            document.querySelector("#pc7").src = "./img/oval.png";
 
         }, 3000);
 
@@ -269,8 +222,7 @@ function matchingCard(randomCard){
         }, 1000);
 
         setTimeout(() => {
-            document.querySelector("#pc8").remove();
-            document.querySelector(".card-div8").classList.add("card-background");
+            document.querySelector("#pc8").src = "./img/oval.png";
 
         }, 3000);
 
@@ -282,8 +234,7 @@ function matchingCard(randomCard){
         }, 1000);
 
         setTimeout(() => {
-            document.querySelector("#pc9").remove();
-            document.querySelector(".card-div9").classList.add("card-background");
+            document.querySelector("#pc9").src = "./img/oval.png";
 
         }, 3000);
 
@@ -294,8 +245,7 @@ function matchingCard(randomCard){
         }, 1000);
 
         setTimeout(() => {
-            document.querySelector("#pc10").remove();
-            document.querySelector(".card-div10").classList.add("card-background");
+            document.querySelector("#pc10").src = "./img/oval.png";
 
         }, 3000);
 
@@ -307,8 +257,7 @@ function matchingCard(randomCard){
         }, 1000);
 
         setTimeout(() => {
-            document.querySelector("#pc11").remove();
-            document.querySelector(".card-div11").classList.add("card-background");
+            document.querySelector("#pc11").src = "./img/oval.png";
 
         }, 3000);
 
@@ -319,8 +268,7 @@ function matchingCard(randomCard){
         }, 1000);
 
         setTimeout(() => {
-            document.querySelector("#pc12").remove();
-            document.querySelector(".card-div12").classList.add("card-background");
+            document.querySelector("#pc12").src = "./img/oval.png";
 
         }, 3000);
     }
@@ -333,14 +281,17 @@ pickCardBtn.addEventListener("click", getCard);
 function restartGame(){
     
 
-    setTimeout(() =>{ replayDivLocation.style.opacity = "0.6";}, 200);
-    setTimeout(() =>{ replayDivLocation.style.opacity = "0.4";}, 300);
-    setTimeout(() =>{ replayDivLocation.style.opacity = "0.2";}, 400);
-    setTimeout(() =>{ replayDivLocation.style.opacity = "0";}, 500);
-    setTimeout(() =>{ replayDivLocation.remove();
+    setTimeout(() =>{ loseDivLocation.style.opacity = "0.6";}, 200);
+    setTimeout(() =>{ loseDivLocation.style.opacity = "0.4";}, 300);
+    setTimeout(() =>{ loseDivLocation.style.opacity = "0.2";}, 400);
+    setTimeout(() =>{ loseDivLocation.style.opacity = "0";}, 500);
+    setTimeout(() =>{ loseDivLocation.remove();
 
         drawCounterLocation.innerHTML = "10";
         bingoArray = []; 
+
+ 
+       
 
         document.querySelector("#pc1").src = "./img/1.png";
         document.querySelector("#pc2").src = "./img/2.png";

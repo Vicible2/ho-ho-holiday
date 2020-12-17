@@ -100,7 +100,7 @@ button h3 {
   width: 200px;
 }
 
-.replay-btn-div {
+.replay-btn-div-win, .replay-btn-div-lose {
   display: none;
   position: absolute;
   width: 100%;
@@ -113,8 +113,8 @@ button h3 {
   position: absolute;
   top: 40%;
   border: 2px solid #F5D3A0;
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
   background-color: #F5D3A0;
   border-radius: 50%;
   right: 40%;
@@ -131,7 +131,7 @@ button h3 {
 
 .player-card {
   background-color: #B7D4FC;
-  width: 80%;
+  width: 90%;
   margin: auto;
   padding: 5px;
   z-index: -1;
@@ -159,37 +159,29 @@ button h3 {
 .card {
   border-radius: 5px;
   background-color: #E1F2F7;
-  width: 95%;
+  width: 80%;
   margin: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (25%)[4];
       grid-template-columns: repeat(4, 25%);
   justify-items: center;
-  padding: 10px;
 }
 
 .card img {
   width: 100%;
   -ms-grid-column-align: center;
       justify-self: center;
-  padding: px;
 }
 
 .card * {
   height: 90px;
   width: 90px;
-  background-color: #E1F2F7;
-}
-
-.card-background {
-  background-color: #001B3D;
-  border-radius: 50%;
 }
 
 .run-pumping {
-  -webkit-animation: pumping 2.5s alternate 2 ease-in;
-          animation: pumping 2.5s alternate 2 ease-in;
+  -webkit-animation: pumping 2s alternate 1 ease-in;
+          animation: pumping 2s alternate 1 ease-in;
 }
 
 .run-animation {
