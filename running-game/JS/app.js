@@ -173,7 +173,7 @@ function RandomIntInRange(min, max) {
 }
 let streetHeight = 30;
 
-
+//draw santa Sprite on canvas
 drawSanta = () => {
   
   let santaY = canvas.height - santaImage.height - streetHeight;

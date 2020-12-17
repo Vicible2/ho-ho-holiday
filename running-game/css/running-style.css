@@ -116,7 +116,7 @@ main {
   width: 85vw;
   background-color: #001B3D;
   background-image: url(../assets/bg.png);
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: left bottom;
 }
