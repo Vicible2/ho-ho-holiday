@@ -2,7 +2,7 @@
 --- 
 
 Our christmas-themed mini-game page is finally up for business! Take a look around and have some fun!
-
+## [Ho-ho-holiday Games!](https://vicible2.github.io/ho-ho-holiday/ "HO HO HOLIDAY HOME PAGE")
 ---
 
 ## Whats in here??
@@ -62,7 +62,7 @@ Some of the following features were required:
 ---
 
 ### Contact us for more info or questions!
-### Current active developers:
+### Devlopers used:
 
 * Wing Tong
   * [Wing's Github page](https://github.com/chevtong "Wing's Github page")
@@ -76,3 +76,21 @@ Some of the following features were required:
 * Manten Devillé
   * [Manten's Github page](https://github.com/Vicible2 "Manten's Github page")
   
+### Technology used:
+
+* IDE:
+  * PHP-storm
+  * VScode
+* Languages:
+  * HTML
+  * CSS
+    * SCSS / SASS
+  * JavaScript
+* Asset creators:
+  * PiskelApp
+  * Illustrator
+  * Photoshop
+* Sources:
+  * flaticon
+  * zapsplat
+  * ...
