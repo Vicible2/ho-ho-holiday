@@ -15,8 +15,9 @@ document.getElementById("submit").addEventListener("click", (event) => {
 document.getElementById("result").addEventListener("click", (event) => {
     event.preventDefault();
 
+event.preventDefault();
  document.getElementById("inputpeople").style.display="none";
- let=output=document.getElementById("outputText");
+ let output=document.getElementById("outputText");
  output.innerHTML="Here is your dearest people :"+ nameLists;
  
 

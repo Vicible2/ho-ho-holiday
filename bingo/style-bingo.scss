@@ -1,7 +1,7 @@
 @import "../common-css/style-common.scss";
 
 
-// TODO: responsivess
+
 
 main{
     padding-top: 100px;
@@ -25,7 +25,25 @@ button{
         text-align: center;
     }
 }
+/* Share Section start */
+.share-btn-container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    a {
+        margin: 12px 0;
+    }  
+}
 
+.share-btn-container a i {
+font-size: 25px;
+color: $silverblue;
+}
+
+// Card section start
 .container{
     display: grid;
     grid-template-columns: 30% 70%;
