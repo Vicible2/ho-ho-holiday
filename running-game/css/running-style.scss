@@ -113,6 +113,25 @@ main{
 }
 
 
+.share-btn-container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    position: fixed;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    a {
+        margin: 12px 0;
+    }  
+}
+
+.share-btn-container a i {
+font-size: 25px;
+color: $silverblue;
+}
+
+
 /* .sound {
     display: flex;
     flex-direction: row;
