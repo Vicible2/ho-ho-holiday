@@ -109,7 +109,7 @@ input{
 
 button{
 
-        border-radius: 8px;
+  border-radius: 8px;
   border: 2px solid #F5D3A0;
   outline: none;
   background: #F5D3A0;
@@ -145,5 +145,49 @@ select{
   pointer-events: none;
   z-index: 1000;
 }
+
+
+/* Share Section start */
+.share-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.share-btn-container a {
+  margin: 12px 0;
+}
+
+.share-btn-container i {
+  font-size: 25px;
+  color: #E1F2F7;
+}
+
+.share-btn-container .fa-facebook:hover {
+  color: #1674EA;
+}
+
+.share-btn-container .fa-twitter:hover {
+  color: #74c5ff;
+}
+
+.share-btn-container .fa-envelope:hover {
+  color: #F5D3A0;
+}
+
+.share-btn-container .fa-whatsapp:hover {
+  color: #3ef760;
+}
+
+
 
 
