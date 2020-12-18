@@ -17,7 +17,7 @@ main{
     padding-top: 20%;
 }
 
-.santaGifs {
+.gifs {
     height: 32px;
     width: 85vw;
   //  background-color: yellow;   
@@ -36,6 +36,26 @@ main{
         height: 32px;
         width: 32px;
         background-color: transparent;
+    }
+    .evilElf {
+        background-image: url(./../assets/sprites/evilElf.gif);
+        height: 32px;
+        width: 32px;
+    }
+    .evilElfRight {
+        background-image: url(./../assets/sprites/evilElfRight.gif);
+        height: 32px;
+        width: 32px;
+    }
+    .evilGift {
+        background-image: url(./../assets/sprites/evilGift.gif);
+        height: 32px;
+        width: 32px;
+    }
+    .evilGiftRight {
+        background-image: url(./../assets/sprites/evilGiftRight.gif);
+        height: 32px;
+        width: 32px;
     }
 }
 .borderGame {
