@@ -1,17 +1,68 @@
 # Welcome to our holiday page!
 --- 
-![roadblock](./running-game/assets/under-construction.png)
 
-![Construction icon1](./running-game/assets/repair-tools.png) Under construction! ![Construction icon1](./running-game/assets/repair-tools.png)
+Our christmas-themed mini-game page is finally up for business! Take a look around and have some fun!
+## [Ho-ho-holiday Games!](https://vicible2.github.io/ho-ho-holiday/ "HO HO HOLIDAY HOME PAGE")
+---
 
-We are currently developing a christmas-themed mini-game page.
-Stay tuned for more!
-![Santa icon](./running-game/assets/santa-claus.png)
+## Whats in here??
+
+Check out our Ho-ho-holiday themed games now! 
+
+* Dress the Elf! ![Elf](./running-game/assets/elf.png "elf icon") 
+
+  * Dress your little helper in time for the Christmas Party!
+* Running game! ![Santa](./running-game/assets/santa-claus.png  "Santa icon") 
+
+  * Dodge the evil elves and gifts and help Santa get his highest Christmas score ever!
+
+* Gift Name Generator ![Gift](./running-game/assets/gift-box.png  "Christmas gift") 
+  * Ready for the secret Santa gift exchange?
+
+* Holiday Bingo!  ![card](./running-game/assets/christmas-card.png  "Christmas card") 
+  * Can you get a bingo with 4 of them in a row?
+
+## What is it?
+
+To help our fellow lockdown-captives, we had been tasked with the very special assignment to make a mini-game site to grant some fun to them!
+
+Some of the following features were required:
+* Consistent theme/look & feel (winter, santa in our case) 
+![Santa!](./running-game/assets/santa-claus.png "Santa icon") 
+
+* Have a feature/game per developer, or one very big feature.
+![Gamepad](./running-game/assets/joystick.png "gamepad") 
+* An overview page that links to all the features
+* Try to have optimized images (and copyright free)
+* Some use of Google Analytics
+* Add some og Tags
+* A clear ReadMe (I mean, duh?)
+
+
+
+## Our Way of working:
+
+* Start with a Trello
+  * Pitch game ideas
+  * Pitch themes/colors
+  * Divide games and roles
+* No personal deadlines but interact in calls during the day
+  * Help eachother with screenshares
+  * Share code to implement for eachother
+  * Share techniques (falling snow, share icons, etc...)
+* No technical restrictions
+  * Not everyone is forced to use: scss, certain techniques
+  * Adapt code for everyone
+  * Make everyone feel the most comfortable with their IDE/techniques
+* Run over issues & problems together
+  * Merge issues
+  * Code not working for someone?
+  * ...
 
 ---
 
 ### Contact us for more info or questions!
-### Current active developers:
+### Devlopers used:
 
 * Wing Tong
   * [Wing's Github page](https://github.com/chevtong "Wing's Github page")
@@ -25,3 +76,21 @@ Stay tuned for more!
 * Manten Devillé
   * [Manten's Github page](https://github.com/Vicible2 "Manten's Github page")
   
+### Technology used:
+
+* IDE:
+  * PHP-storm
+  * VScode
+* Languages:
+  * HTML
+  * CSS
+    * SCSS / SASS
+  * JavaScript
+* Asset creators:
+  * PiskelApp
+  * Illustrator
+  * Photoshop
+* Sources:
+  * flaticon
+  * zapsplat
+  * ...

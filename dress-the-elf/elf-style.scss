@@ -1,9 +1,29 @@
 @import "../common-css/style-common.scss";
 
+.explain{
+  text-align: center;
+  height: 450px;
+  width: 300px;
+  padding: 10px;
+}
+
+.explain h1{
+  color: $darkblue;
+  font-family: $titlefont;
+  font-size: 60px;
+  text-align: center;
+}
+
+.explain p{
+  color: $darkblue;
+  font-family: $contentfont;
+  padding-top: 50px;
+}
+
 main{
   display: flex;
   justify-content: center;
-  padding-top: 150px;
+  padding-top: 100px;
   margin-bottom: -150px;
 }
 
@@ -16,25 +36,47 @@ main{
 
 #container-game{
   width: 500px;
-  height: 500px;
-  background-color: $yellow ;
+  height: 450px;
+  background-image: url("img/gamebackground.png");
   display: flex;
   justify-content: center;
   padding-top: 20px;
+  border-radius: 8px;
 }
 
 .container{
   background-color: $silverblue;
-  width: 1000px;
-  height: 575px;
+  width: 850px;
+  height: 500px;
+  padding-right: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 8px;
 }
 
 #wraper{
   width: 500px;
-  height: 500px;
+  height: 450px;
   display: flex;
   justify-content: center;
 }
 
+/* Share Section start */
+
+.share-btn-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  a {
+    margin: 12px 0;
+  }
+}
+
+.share-btn-container a i {
+  font-size: 25px;
+  color: $silverblue;
+}
