@@ -225,8 +225,8 @@ main {
   color: #74c5ff;
 }
 
-.share-btn-container .fa-enveloppe:hover {
-  color: white;
+.share-btn-container .fa-envelope:hover {
+  color: #F5D3A0;
 }
 
 .share-btn-container .fa-whatsapp:hover {

@@ -139,9 +139,9 @@ main{
             color: #74c5ff;
         }
     }
-    .fa-enveloppe {
+    .fa-envelope {
         &:hover {
-            color: white;
+            color: $yellow;
         }
     }
     .fa-whatsapp {
