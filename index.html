@@ -3,24 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- OG tags start here -->
+    <meta property="og:title" content="Some Fun For the Holiday?"/>
+    <meta property="og:type" content="game" />
+    <meta property="og:url" content="https://vicible2.github.io/ho-ho-holiday/" />
+    <meta property="og:description" content="We all stuck at home for this Corona Christmas, why not get some fun with your friends and family online?"/>
+    <meta property=”og:image” content="https://github.com/Vicible2/ho-ho-holiday/blob/main/landing-page/img/images.png?raw=true" />
+
     
     <!-- bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     
     <!-- css of landing-page -->
-    <link rel="stylesheet" href="/landing-page/style-index.css">
+    <link rel="stylesheet" href="landing-page/style-index.css">
 
     <!-- favicon insert -->
-    <link rel="shortcut icon" type="image/png" href="/navbar+footer/snowflake.png">
+    <link rel="shortcut icon" type="image/png" href="navbar+footer/snowflake.png">
 
     <!-- fontawsome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
    
     <title>Ho Ho Holiday</title>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D6NHH23FN8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-D6NHH23FN8');
+    </script>
+
 </head>
 
 <body>
+
 
     <!-- navbar start -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
@@ -38,16 +57,16 @@
                 <a class="nav-link" aria-current="page" href="#"><p>Home</p></a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link " href="#"><p>Drag & Drop</p></a>
+                <a class="nav-link " href="dress-the-elf/dressup.html"><p>Dress The Elf</p></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/running-game/running.html"><p>Running Game</p></a>
+                <a class="nav-link" href="running-game/running.html"><p>Running Game</p></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/gift-generator/gitf-index.html"><p>Gift Idea Generator</p></a>
+                <a class="nav-link" href="gift-generator/gitf-index.html"><p>Gift Idea Generator</p></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/bingo/bingo.html"><p>Bingo</p></a>
+                <a class="nav-link" href="bingo/bingo.html"><p>Bingo</p></a>
               </li>
             </ul>        
           </div>
@@ -56,6 +75,7 @@
       <!-- end of navbar -->
 
     <main>
+ 
            
       <!-- snow effect start -->
       <svg class="svg-snowscene">
@@ -127,20 +147,37 @@
         <circle class="snow" />
         <circle class="snow" />
         <circle class="snow" />
-        <circle class="snow" />
-        <circle class="snow" />
       </svg>
+
+      <!-- share section start -->
+      <div class="share-btn-container">
+        <a href="#" class="facebook-btn">
+          <i class="fab fa-facebook"></i>
+        </a>
+
+        <a href="#" class="twitter-btn">
+          <i class="fab fa-twitter"></i>
+        </a>
+  
+        <a href="#" class="email-btn">
+          <i class="far fa-envelope"></i>        
+        </a>
+  
+        <a href="#" class="whatsapp-btn">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
 
       <!-- landing page start -->
       <div id="landingsection">
       <div class="landingsection">
           <div class="landingsection-text">
+            
               <h1> <span class="christ">Christmas</span> is the time of  <br><span class=cross>family</span><br>  <span class="typing">ZOOM CALLS AND GAMES</span></h1>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, architecto!</p>
               
               <a href="#game"><i class="fas fa-caret-down"></i></a>
           </div>
-          <img src="/landing-page/img/043-movie.png" alt="Santa Claus Online">
+          <img src="landing-page/img/043-movie.png" alt="Santa Claus Online">
       </div>
     </div>
 
@@ -149,14 +186,14 @@
 
 
       <div id="game">
-        <img class="game-small-icon" src="/landing-page/img/010-teddy-bear.png" alt="teddy">
-        <img class="game-image" src="/landing-page/img/images.png" alt="Drag and Drop">
+        <img class="game-small-icon" src="landing-page/img/010-teddy-bear.png" alt="teddy">
+        <img class="game-image" src="landing-page/img/dress.png" alt="Dress the elf">
 
         <div class="game-text">
-          <h3>Make your own character!</h3>
+          <h3>Dress The Elf</h3>
           <!-- TODO: put a description of the game and link up the url -->
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, quaerat.</p>
-          <a href="#"><p class="link-game">TRY IT OUT</p></a>
+          <p>Dress this little helper in time for the Christmas party</p>
+          <a href="dress-the-elf/dressup.html"><p class="link-game">TRY IT OUT</p></a>
           <a href="#game-two"><i class="fas fa-caret-down"></i></a>
         </div>      
 
@@ -166,29 +203,28 @@
       <div id="game-two">
 
         <div class="game-text-two">
-          <h3>Let's have a race!</h3>
-          <!-- TODO: put a description of the game and link up the url -->
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nam?</p>
-            <a href="/running-game/running.html"><p class="link-game-two">TRY IT OUT</p></a>
+          <h3>Running Game</h3>
+            <p>Want to help the santa to tackle all obstacles?</p>
+            <a href="running-game/running.html"><p class="link-game-two">TRY IT OUT</p></a>
           <a href="#game-three"><i class="fas fa-caret-down"></i></a>
         </div>   
 
-        <img class="game-small-icon-two" src="/landing-page/img/005-reindeer.png" alt="reindeer">
-        <img class="game-image-two" src="/landing-page/img/images.png" alt="Drag and Drop">
+        <img class="game-small-icon-two" src="landing-page/img/005-reindeer.png" alt="reindeer">
+        <img class="game-image-two" src="landing-page/img/running.png" alt="running-game">
 
       </div>
 
       <!-- gift generator start -->
       <div id="game-three">
-        <img class="game-small-icon-three" src="/landing-page/img/015-christmas-tree.png" alt="gifts">
-        <img class="game-image-three" src="/landing-page/img/images.png" alt="Drag and Drop">
+        <img class="game-small-icon-three" src="landing-page/img/015-christmas-tree.png" alt="gifts">
+        <img class="game-image-three" src="landing-page/img/gift.png" alt="gift-generator">
 
         <div class="game-text-three">
 
-          <h3>Need an idea for the beloved one?</h3>
+          <h3>Gift Idea Generator</h3>
           <!-- TODO: put a description of the game and link up the url -->
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nam?</p>
-          <a href="/gift-generator/gitf-index.html"><p class="link-game-three">TRY IT OUT</p></a>
+          <p>Ready for the Secret Santa gift exchange?</p>
+          <a href="gift-generator/gitf-index.html"><p class="link-game-three">TRY IT OUT</p></a>
           <a href="#game-four"><i class="fas fa-caret-down"></i></a>
 
         </div>      
@@ -201,15 +237,14 @@
         <div class="game-text-four">
 
           <h3>To see your luck?</h3>
-          <!-- TODO: put a description of the game and link up the url -->
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nam?</p>
-          <a href="/bingo/bingo.html"><p class="link-game-four">TRY IT OUT</p></a>
+          <p>Can you get a bingo with 4 of them in a row?</p>
+          <a href="bingo/bingo.html"><p class="link-game-four">TRY IT OUT</p></a>
           <a href="#landingsection"><i class="fas fa-caret-up"></i></a>
 
         </div>   
 
-        <img class="game-small-icon-four" src="/landing-page/img/008-nutcracker.png" alt="nutcracker">
-        <img class="game-image-four" src="/landing-page/img/images.png" alt="Drag and Drop">
+        <img class="game-small-icon-four" src="landing-page/img/008-nutcracker.png" alt="nutcracker">
+        <img class="game-image-four" src="landing-page/img/bingo.png" alt="bingo">
 
       </div>
 
@@ -219,7 +254,7 @@
     <!-- footer start here     -->
     <footer id="footer">
       <div class="footer-image">
-      <img src="../tree-image/trees.png" alt="snow">
+      <img src="tree-image/treessmaller.png" alt="snow">
       </div>
     </footer>  
 
@@ -227,7 +262,7 @@
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
-    <script src="/landing-page/script-index.js"></script>
+    <script src="landing-page/script-index.js"></script>
 
 </body>
 </html>

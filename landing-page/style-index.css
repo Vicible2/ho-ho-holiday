@@ -148,7 +148,7 @@ a {
   margin: auto;
   -ms-grid-columns: 80% 20%;
       grid-template-columns: 80% 20%;
-  padding-bottom: 130px;
+  padding-bottom: 50px;
 }
 
 .landingsection img {
@@ -268,7 +268,7 @@ a {
   border-radius: 30px 30px 0 0;
   display: -ms-grid;
   display: grid;
-  padding: 100px 0 300px 0;
+  padding: 100px 0 80px 0;
   margin: auto;
   grid-gap: 20px;
   -ms-grid-columns: 40% 50% 10%;
@@ -337,7 +337,8 @@ a {
 }
 
 .game-image {
-  width: 300px;
+  width: 400px;
+  opacity: .9;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -356,7 +357,7 @@ a {
   display: grid;
   padding: 15%;
   margin: auto;
-  padding: 100px 0 300px 0;
+  padding: 100px 0;
   -ms-grid-columns: 10% 50% 40%;
       grid-template-columns: 10% 50% 40%;
   -ms-grid-rows: 10% 90%;
@@ -424,7 +425,8 @@ a {
 }
 
 .game-image-two {
-  width: 300px;
+  width: 400px;
+  opacity: .9;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -441,7 +443,7 @@ a {
   border-radius: 30px 30px 0 0;
   display: -ms-grid;
   display: grid;
-  padding: 150px 0 300px 0;
+  padding: 150px 0;
   margin: auto;
   -ms-grid-columns: 40% 50% 10%;
       grid-template-columns: 40% 50% 10%;
@@ -509,7 +511,8 @@ a {
 }
 
 .game-image-three {
-  width: 300px;
+  width: 400px;
+  opacity: .9;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
@@ -528,7 +531,7 @@ a {
   display: grid;
   padding: 15%;
   margin: auto;
-  padding: 100px 0 300px 0;
+  padding: 100px 0;
   -ms-grid-columns: 10% 50% 40%;
       grid-template-columns: 10% 50% 40%;
   -ms-grid-rows: 10% 90%;
@@ -596,13 +599,39 @@ a {
 }
 
 .game-image-four {
-  width: 300px;
+  width: 400px;
+  opacity: .9;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
+}
+
+/* Share Section start */
+.share-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.share-btn-container a {
+  margin: 12px 0;
+}
+
+.share-btn-container a i {
+  font-size: 25px;
+  color: #E1F2F7;
 }
 
 #footer {
@@ -613,14 +642,21 @@ a {
   z-index: 1;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 999px) {
+  .share-btn-container {
+    padding: 10px;
+    z-index: 2;
+  }
+  .share-btn-container i {
+    font-size: 10px;
+  }
   .landingsection {
     height: auto;
     -ms-grid-columns: 90%;
         grid-template-columns: 90%;
     -ms-grid-rows: 30% 70%;
         grid-template-rows: 30% 70%;
-    padding: 20px 0;
+    padding: 100px 0 20px 0;
   }
   .landingsection img {
     -ms-grid-row: 1;
@@ -633,7 +669,7 @@ a {
         grid-template-columns: 90%;
     -ms-grid-rows: 10% 40% 50%;
         grid-template-rows: 10% 40% 50%;
-    padding: 30px 0;
+    padding: 30px 0 100px 0;
     grid-gap: 5px;
     margin: auto;
   }
@@ -657,7 +693,7 @@ a {
         grid-template-columns: 70%;
     -ms-grid-rows: 10% 40% 50%;
         grid-template-rows: 10% 40% 50%;
-    padding: 30px 0;
+    padding: 30px 0 100px 0;
     grid-gap: 5px;
     margin: auto;
     width: 100%;
@@ -694,7 +730,7 @@ a {
         grid-template-columns: 90%;
     -ms-grid-rows: 10% 40% 50%;
         grid-template-rows: 10% 40% 50%;
-    padding: 30px 0;
+    padding: 30px 0 100px 0;
     grid-gap: 5px;
     margin: auto;
   }
@@ -718,7 +754,7 @@ a {
         grid-template-columns: 70%;
     -ms-grid-rows: 10% 40% 50%;
         grid-template-rows: 10% 40% 50%;
-    padding: 30px 0;
+    padding: 30px 0 100px 0;
     grid-gap: 5px;
     margin: auto;
     width: 100%;

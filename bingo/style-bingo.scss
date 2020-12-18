@@ -5,7 +5,8 @@
 
 main{
     padding-top: 100px;
-    height: 68vh;
+    height: 50vh;
+    
 }
 button{
     border: 2px solid $lightblue;
@@ -28,36 +29,36 @@ button{
 .container{
     display: grid;
     grid-template-columns: 30% 70%;
-    grid-gap:2rem;
+    grid-gap: 1rem;
     width: 90vw;
-    margin: auto;
+    margin: auto; 
 }
 
 .computer-card{
     display: grid;
-    grid-template-rows: 70% 30%;
+    grid-template-rows: 60% 20% 20%;
     padding: 30px;
     justify-self: center;
+    text-align: center;
     img{
         width: 200px;
     }
 }
-.replay-btn-div{
+.replay-btn-div-win, .replay-btn-div-lose{
     display: none;
-    
     position: absolute;
-    // background-color: $lightblue;
     width: 100%; 
     height: 60%;
     padding: 0;
     opacity: .9;
+    z-index: 100;
 }
-#replay{
+#replay, #replay-win{
     position: absolute;
     top: 40%;
     border: 2px solid $yellow;
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
     background-color: $yellow;
     border-radius: 50%;
     right: 40%;
@@ -76,8 +77,9 @@ button{
     background-color: $medblue;
     width: 80%;
     margin:auto;
-    padding: 5px;
+    padding: 5px 5px 30px 5px;
     z-index: -1;
+    border-radius: 8px;
 }
 
 .card-title{
@@ -96,35 +98,29 @@ button{
 }
 
 .card{
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: $silverblue;
-    width: 95%;
-    //height: 680px;
+    width: 80%;
     margin:auto;
     display: grid;
     grid-template-columns: repeat(4, 25%);
     justify-items: center;
-    padding: 10px;
     img{
         width: 100%;
         justify-self: center;
-        padding: px;
+        padding: 5px;   
     }
   
 }
 .card * {
-    height: 90px;
-    width: 90px;
-    background-color: $silverblue;
+    height: 130px;
+    width: 130px;
 }
-.card-background{
-    background-color: $darkblue;
-    border-radius: 50%;
-}
+
 
 // animation class(will be add by javascript)
 .run-pumping {
-    animation: pumping 2.5s alternate 2 ease-in;
+    animation: pumping 2s alternate 1 ease-in;
 }
 
 .run-animation {
@@ -149,4 +145,68 @@ button{
     60% {transform: scale(1.2);}
     80% {transform: scale(.7);}
     100% {transform: scale(.3);}
+}
+
+
+// media query start
+@media only screen and (max-width: 999px) {
+    .container{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .computer-card{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 30% 70%;
+        justify-items: center;
+        grid-gap: 10px;
+        button{
+            align-self: center;
+        }
+        img{
+            grid-row:1/3;
+        }
+        h4{
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+    }
+    .player-card{
+        width: 95%; 
+        margin: 10% auto;
+        
+    }
+    .card{
+        width: 100%;
+    }
+    .card *{
+        width: 90px;
+        height: 90px; 
+    }
+    // footer css
+    footer{
+        position: fixed;
+    }
+}
+
+@media only screen and (max-width: 468px) {
+    
+    .computer-card{
+        height: auto;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 30% 20%;
+        justify-items: center;
+        padding: 5px;
+        img{
+            padding:10px;
+            grid-row: 1/2;
+        }
+        h4{
+            font-size: 20px;
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+     
+}
+   
 }
