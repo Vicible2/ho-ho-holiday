@@ -124,12 +124,36 @@ main{
     a {
         margin: 12px 0;
     }  
+    i {
+        font-size: 25px;
+        color: $silverblue;
+
+    }
+    .fa-facebook {
+        &:hover {
+            color: #1674EA;
+        }
+    }
+    .fa-twitter {
+        &:hover {
+            color: #74c5ff;
+        }
+    }
+    .fa-envelope {
+        &:hover {
+            color: $yellow;
+        }
+    }
+    .fa-whatsapp {
+        &:hover {
+            color: #3ef760;
+        }
+    }
+    
 }
 
-.share-btn-container a i {
-font-size: 25px;
-color: $silverblue;
-}
+
+
 
 
 /* .sound {
