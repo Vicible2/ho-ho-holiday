@@ -12,7 +12,8 @@ document.getElementById("submit").addEventListener("click", (event) => {
 
 });
 
-document.getElementById("result").addEventListener("click", () => {
+document.getElementById("result").addEventListener("click", (event) => {
+    event.preventDefault();
 
  document.getElementById("inputpeople").style.display="none";
  let=output=document.getElementById("outputText");
@@ -64,8 +65,7 @@ document.getElementById("result").addEventListener("click", () => {
         let recipient = recipients.splice(randomNumber, 1)[0];
         emptyArray.push({sender: sender,receiver: recipient});
 
-        let result=document.getElementById("yourpair");
-        result.innerHTML= sender +" "+ "Prepare your surprise for " + " "  + recipient;
+        document.getElementById("yourpair").innerHTML= sender +" "+ "Prepare your surprise for " + " "  + recipient;
 
     }
     
@@ -84,7 +84,6 @@ console.log(pair(nameLists));
         let sent=person.sender;
         console.log(sent);
         console.log(take);
-            //     result.innerText=option.options[option.selectedIndex].text;
 
 
 
