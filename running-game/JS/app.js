@@ -101,7 +101,7 @@ class Player {
     ctx.fillStyle = this.c;
     ctx.fillRect(this.x, this.y, this.w, this.h);
     ctx.closePath();
-    drawSanta();
+    //drawSanta();
     // context.drawImage(character, 0, 0, canvas.width, canvas.height);
 
   }
@@ -178,14 +178,14 @@ drawSanta = () => {
   
   let santaY = canvas.height - santaImage.height - streetHeight;
   console.log(santaY);
-  ctx.drawImage(santaImage, 0, 0, 100, 100, 250, santaY, 300, 200)
+  ctx.drawImage(santaImage, 0, 0, 100, 100, 250, santaY, 200, 200)
 }
 
 //initialize function so all variables are at default values.
 function Start() {
 
   //Image sprite test
-  santaImage.src = "./assets/sprites/santa-sprite-sheet.png"
+  santaImage.src = "./assets/sprites/santa-idle.gif"
   santaImage.onload = () => {
     drawSanta();
   }
