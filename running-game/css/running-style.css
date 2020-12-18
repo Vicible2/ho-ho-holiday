@@ -79,6 +79,35 @@ main {
   padding-top: 20%;
 }
 
+.santaGifs {
+  height: 32px;
+  width: 85vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.santaGifs .santaLeft {
+  background-image: url(./../assets/sprites/santaJump.gif);
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+}
+
+.santaGifs .santaRight {
+  background-image: url(./../assets/sprites/santaJumpRight.gif);
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+}
+
 .borderGame {
   padding-top: 3px;
   display: -webkit-box;
@@ -161,6 +190,31 @@ main {
   bottom: 0;
   pointer-events: none;
   z-index: 1000;
+}
+
+.share-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px;
+  position: fixed;
+  top: 50%;
+  left: 0%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.share-btn-container a {
+  margin: 12px 0;
+}
+
+.share-btn-container a i {
+  font-size: 25px;
+  color: #E1F2F7;
 }
 
 /* .sound {

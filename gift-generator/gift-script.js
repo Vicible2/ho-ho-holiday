@@ -12,7 +12,8 @@ document.getElementById("submit").addEventListener("click", (event) => {
 
 });
 
-document.getElementById("result").addEventListener("click", (e) => {
+document.getElementById("result").addEventListener("click", (event) => {
+    event.preventDefault();
 
 event.preventDefault();
  document.getElementById("inputpeople").style.display="none";
@@ -23,17 +24,26 @@ event.preventDefault();
 
 
 
-    function drawList()
- 
+    function drawList(){
      output.innerHTML = '<option value="">Who are you?</option>';
      for (var i = nameLists.length - 1; i >= 0; i--) {
          var option = document.createElement('option');
          option.value = i;
          option.innerHTML = nameLists[i];
          output.appendChild(option);
+         console.log(option);
      }
- }
+
+
+    
+    }
+    
+     
  
+ 
+ 
+
+
     let pair = function (myPeople) {
     
     
@@ -50,7 +60,7 @@ event.preventDefault();
 
     while (recipients[randomNumber] === sender) { // divided people's random number is equal to sender!! Can't send gift to myself
 
-        randomNumber = Math.floor(Math.random() * recipients.length -1); // not sure why its repeated as line 34
+        randomNumber = Math.floor(Math.random() * recipients.length); // not sure why its repeated as line 34
     }
 
         let recipient = recipients.splice(randomNumber, 1)[0];
@@ -61,20 +71,20 @@ event.preventDefault();
     }
     
     return emptyArray;
-    };
 
-// console.log(pair(nameLists));
+     };
+     //try for dropdown select value 
+    
+
+
+console.log(pair(nameLists));
 
     emptyArray=pair(nameLists);
     emptyArray.forEach(person => {
-
-        let specific=person.sender;
-        console.log(specific);
-        
-
-
-        
-
+        let take=person.receiver;
+        let sent=person.sender;
+        console.log(sent);
+        console.log(take);
 
 
 
