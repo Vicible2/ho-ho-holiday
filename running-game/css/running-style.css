@@ -79,6 +79,35 @@ main {
   padding-top: 20%;
 }
 
+.santaGifs {
+  height: 32px;
+  width: 85vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.santaGifs .santaLeft {
+  background-image: url(./../assets/sprites/santaJump.gif);
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+}
+
+.santaGifs .santaRight {
+  background-image: url(./../assets/sprites/santaJumpRight.gif);
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+}
+
 .borderGame {
   padding-top: 3px;
   display: -webkit-box;
