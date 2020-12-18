@@ -629,9 +629,25 @@ a {
   margin: 12px 0;
 }
 
-.share-btn-container a i {
+.share-btn-container i {
   font-size: 25px;
   color: #E1F2F7;
+}
+
+.share-btn-container .fa-facebook:hover {
+  color: #1674EA;
+}
+
+.share-btn-container .fa-twitter:hover {
+  color: #74c5ff;
+}
+
+.share-btn-container .fa-envelope:hover {
+  color: #F5D3A0;
+}
+
+.share-btn-container .fa-whatsapp:hover {
+  color: #3ef760;
 }
 
 #footer {
