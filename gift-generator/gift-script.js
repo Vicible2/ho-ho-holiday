@@ -12,10 +12,11 @@ document.getElementById("submit").addEventListener("click", (event) => {
 
 });
 
-document.getElementById("result").addEventListener("click", () => {
+document.getElementById("result").addEventListener("click", (e) => {
 
+event.preventDefault();
  document.getElementById("inputpeople").style.display="none";
- let=output=document.getElementById("outputText");
+ let output=document.getElementById("outputText");
  output.innerHTML="Here is your dearest people :"+ nameLists;
  
 
@@ -23,7 +24,7 @@ document.getElementById("result").addEventListener("click", () => {
 
 
     function drawList()
- {
+ 
      output.innerHTML = '<option value="">Who are you?</option>';
      for (var i = nameLists.length - 1; i >= 0; i--) {
          var option = document.createElement('option');
