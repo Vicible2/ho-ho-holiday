@@ -20,6 +20,7 @@ let icon10 = document.querySelector("#pc10");
 let icon11 = document.querySelector("#pc11");
 let icon12 = document.querySelector("#pc12");
 
+
 let cards = [1,2,3,4,5,6,7,8,9,10,11,12];
 let bingoArray = []; 
 
@@ -38,36 +39,21 @@ getCard = () => {
 };
 
 compare = (randomCard) => {
+
     bingoArray.push(randomCard);
 
     console.log("bingoArray: " + bingoArray);
 
-    let winSound = document.getElementById("winning-audio");
-
     if(bingoArray.includes(0) && bingoArray.includes(1) && bingoArray.includes(2) && bingoArray.includes(3)){
         
-        //console.log("first row");
-
-        winSound.play();
-
-        setTimeout(() => { winSound.play();}, 3000);
-
-        winGame();
+       winGame();
 
     } else if(bingoArray.includes(4) && bingoArray.includes(5) && bingoArray.includes(6) && bingoArray.includes(7)){
-       
-        //console.log("second row");
-
-        setTimeout(() => { winSound.play();}, 3000);
 
         winGame();
         
     } else if(bingoArray.includes(8) && bingoArray.includes(9) && bingoArray.includes(10) && bingoArray.includes(11)){
         
-        //console.log("third row");
-        
-        setTimeout(() => { winSound.play(); }, 3000);
-
         winGame(); 
     }
 
@@ -76,17 +62,21 @@ compare = (randomCard) => {
 };
 
 winGame = ()=>{
-
-    pickCardBtn.style.display = "none";
-
-    setTimeout(() => {  
-      
-        winDivLocation.style.display = "block";
-        winDivLocation.style.opacity = ".9";
-       
-    }
-    , 4000);
+    
+    setTimeout(() => {
+            
+        let winSound = document.getElementById("winning-audio");
+        winSound.play();
         
+    }, 2500);
+
+    setTimeout(() => {
+
+        pickCardBtn.style.display = "none";     
+        winDivLocation.style.display = "block";
+        winDivLocation.style.opacity = ".9"; 
+
+    }, 3500);
 };
 
 
@@ -97,7 +87,7 @@ loseGame = () => {
 
     drawCounterLocation.innerHTML = remaining;
  
-    if (bingoArray.length == 2){
+    if (bingoArray.length == 50){
         
         pickCardBtn.style.display = "none";
 
@@ -113,134 +103,83 @@ loseGame = () => {
             loseDivLocation.style.display = "block";
             loseDivLocation.style.opacity = ".9";
 
-        }, 3500);
-        
-    }
-
+        }, 3500);        
+    };
 };
 
 matchingCard = (randomCard) => {
     
      if(randomCard == 0){
         
-        setTimeout(() => {       
-            icon1.classList.add("run-pumping");
-        }, 1000);
+        setTimeout(() => { icon1.classList.add("run-pumping")}, 1000);
 
-        setTimeout(() => {
-            icon1.src = "./img/oval.png";
-        }, 3000);
+        setTimeout(() => { icon1.src = "./img/oval.png"; }, 3000);
 
     }  else if(randomCard == 1){
 
-        setTimeout(() => {       
-            icon2.classList.add("run-pumping");
-        }, 1000);
+        setTimeout(() => { icon2.classList.add("run-pumping")}, 1000);
 
-        setTimeout(() => {
-            icon2.src = "./img/oval.png";
-        }, 3000);
+        setTimeout(() => { icon2.src = "./img/oval.png"; }, 3000);
 
     }  else if(randomCard == 2){
 
-        setTimeout(() => {       
-            icon3.classList.add("run-pumping");
-        }, 1000);
+        setTimeout(() => { icon3.classList.add("run-pumping")}, 1000);
 
-        setTimeout(() => {
-            icon3.src = "./img/oval.png";
-        }, 3000);
+        setTimeout(() => { icon3.src = "./img/oval.png"}, 3000);
 
     }  else if(randomCard == 3){
 
-        setTimeout(() => {       
-            icon4.classList.add("run-pumping"); 
-        }, 1000);
+        setTimeout(() => { icon4.classList.add("run-pumping")}, 1000);
 
-        setTimeout(() => {
-           icon4.src = "./img/oval.png";
-        }, 3000);
+        setTimeout(() => { icon4.src = "./img/oval.png"}, 3000);
     
     }  else if(randomCard == 4){
         
-        setTimeout(() => {       
-            icon5.classList.add("run-pumping"); 
-        }, 1000);
+        setTimeout(() => { icon5.classList.add("run-pumping")}, 1000);
 
-        setTimeout(() => {
-            icon5.src = "./img/oval.png";
-        }, 3000);
+        setTimeout(() => { icon5.src = "./img/oval.png"}, 3000);
 
     }  else if(randomCard == 5){
         
-        setTimeout(() => {       
-            icon6.classList.add("run-pumping");
-        }, 1000);
+        setTimeout(() => { icon6.classList.add("run-pumping")}, 1000);
 
-        setTimeout(() => {
-            icon6.src = "./img/oval.png";
-        }, 3000);
+        setTimeout(() => { icon6.src = "./img/oval.png"}, 3000);
 
     }  else if(randomCard == 6){
 
-        setTimeout(() => {       
-            icon7.classList.add("run-pumping");
-        }, 1000);
+        setTimeout(() => { icon7.classList.add("run-pumping")}, 1000);
 
-        setTimeout(() => {
-            icon7.src = "./img/oval.png";
-        }, 3000);
+        setTimeout(() => { icon7.src = "./img/oval.png"}, 3000);
 
     }   else if(randomCard == 7){
 
-        setTimeout(() => {       
-            icon8.classList.add("run-pumping");
-        }, 1000);
+        setTimeout(() => { icon8.classList.add("run-pumping")}, 1000);
 
-        setTimeout(() => {
-            icon8.src = "./img/oval.png";
-        }, 3000);
+        setTimeout(() => { icon8.src = "./img/oval.png"}, 3000);
 
     } else if(randomCard == 8){
 
-        setTimeout(() => {       
-            icon9.classList.add("run-pumping");
-        }, 1000);
+        setTimeout(() => { icon9.classList.add("run-pumping")}, 1000);
 
-        setTimeout(() => {
-            icon9.src = "./img/oval.png";
-        }, 3000);
+        setTimeout(() => { icon9.src = "./img/oval.png"}, 3000);
 
     } else if(randomCard == 9){
 
-        setTimeout(() => {       
-            icon10.classList.add("run-pumping");
-        }, 1000);
+        setTimeout(() => { icon10.classList.add("run-pumping")}, 1000);
 
-        setTimeout(() => {
-           icon10.src = "./img/oval.png";
-        }, 3000);
+        setTimeout(() => { icon10.src = "./img/oval.png"}, 3000);
 
     } else if(randomCard == 10){
 
-        
-        setTimeout(() => {       
-            icon11.classList.add("run-pumping");
-        }, 1000);
+        setTimeout(() => { icon11.classList.add("run-pumping")}, 1000);
 
-        setTimeout(() => {
-            icon11.src = "./img/oval.png";
-        }, 3000);
+        setTimeout(() => { icon11.src = "./img/oval.png"}, 3000);
 
     } else if(randomCard == 11){
         
-        setTimeout(() => {       
-            icon12.classList.add("run-pumping");
-        }, 1000);
+        setTimeout(() => { icon12.classList.add("run-pumping")}, 1000);
 
-        setTimeout(() => {
-            icon12.src = "./img/oval.png";
-        }, 3000);
+        setTimeout(() => { icon12.src = "./img/oval.png"}, 3000);
     }
 };
 
@@ -267,6 +206,7 @@ restartGame = () => {
         winDivLocation.style.display = "none";
 
         drawCounterLocation.innerHTML = "20";
+
         bingoArray = []; 
 
         icon1.src = "./img/1.png";
@@ -284,7 +224,6 @@ restartGame = () => {
 
         pickCardBtn.style.display = "block";
 
-        //console.log("restart");
     }, 600);
 };
 
@@ -293,14 +232,11 @@ pickCardBtn.addEventListener("click", getCard);
 replayBtn.addEventListener("click", restartGame);
 replayBtnWin.addEventListener("click", restartGame);
 
- 
-
 //To allow reactivate the css by adding a class
 "use strict";
 pickCardBtn.addEventListener("click", (e)=>{
   e.preventDefault;
   
-  // -> removing the class
   cardLocation.classList.remove("run-animation");
   
   // -> triggering reflow /* The actual magic */
@@ -309,7 +245,6 @@ pickCardBtn.addEventListener("click", (e)=>{
   // element.offsetWidth = element.offsetWidth;
   void cardLocation.offsetWidth;
   
-  // -> and re-adding the class
   cardLocation.classList.add("run-animation");
 }, false);
 
