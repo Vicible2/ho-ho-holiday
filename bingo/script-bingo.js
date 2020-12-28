@@ -87,7 +87,7 @@ loseGame = () => {
 
     drawCounterLocation.innerHTML = remaining;
  
-    if (bingoArray.length == 50){
+    if (bingoArray.length == 20){
         
         pickCardBtn.style.display = "none";
 
