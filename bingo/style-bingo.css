@@ -383,6 +383,9 @@ button h3 {
     width: 90px;
     height: 90px;
   }
+  .share-btn-container i {
+    font-size: 10px;
+  }
   footer {
     position: fixed;
   }

@@ -4,7 +4,6 @@ let replayBtnWin = document.getElementById("replay-win");
 
 let winDivLocation = document.querySelector(".replay-btn-div-win");
 let loseDivLocation = document.querySelector(".replay-btn-div-lose");
-
 let cardLocation = document.querySelector("#computer-card-image");
 let drawCounterLocation = document.querySelector("#remaining-draw");
 
@@ -22,12 +21,10 @@ let icon11 = document.querySelector("#pc11");
 let icon12 = document.querySelector("#pc12");
 
 let cards = [1,2,3,4,5,6,7,8,9,10,11,12];
-
 let bingoArray = []; 
 
 //Functions
 getCard = () => {
-    console.log("getCard function");
     let randomCard = Math.floor(Math.random() * Math.floor(cards.length));;
 
     cardLocation.src = "./img/snowflake.png";
@@ -41,7 +38,6 @@ getCard = () => {
 };
 
 compare = (randomCard) => {
-    console.log("randomCard function");
     bingoArray.push(randomCard);
 
     console.log("bingoArray: " + bingoArray);
@@ -80,14 +76,13 @@ compare = (randomCard) => {
 };
 
 winGame = ()=>{
-    console.log("winGame function");
+
     pickCardBtn.style.display = "none";
 
     setTimeout(() => {  
-        //TODO: the element cant appear again!!
       
         winDivLocation.style.display = "block";
-       
+        winDivLocation.style.opacity = ".9";
        
     }
     , 4000);
@@ -97,12 +92,12 @@ winGame = ()=>{
 
 
 loseGame = () => {
-   console.log("loseGame function");
+
     let remaining = 20 - bingoArray.length ;
 
     drawCounterLocation.innerHTML = remaining;
  
-    if (bingoArray.length == 20){
+    if (bingoArray.length == 2){
         
         pickCardBtn.style.display = "none";
 
@@ -115,8 +110,8 @@ loseGame = () => {
 
         setTimeout(() => {
 
-           //TODO: the element cant appear again!!
-            loseDivLocation.style.display = "block"; 
+            loseDivLocation.style.display = "block";
+            loseDivLocation.style.opacity = ".9";
 
         }, 3500);
         
@@ -271,7 +266,7 @@ restartGame = () => {
         loseDivLocation.style.display = "none";
         winDivLocation.style.display = "none";
 
-        drawCounterLocation.innerHTML = "15";
+        drawCounterLocation.innerHTML = "20";
         bingoArray = []; 
 
         icon1.src = "./img/1.png";

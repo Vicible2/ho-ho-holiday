@@ -95,8 +95,11 @@ button{
     opacity: .9;
     z-index: 100;
 }
+
+
+
+
 #replay, #replay-win{
-    position: absolute;
     top: 40%;
     border: 2px solid $yellow;
     height: 350px;
@@ -224,6 +227,12 @@ button{
     .card *{
         width: 90px;
         height: 90px; 
+    }
+    .share-btn-container {
+        
+        i {
+            font-size: 10px;    
+        }
     }
     // footer css
     footer{
