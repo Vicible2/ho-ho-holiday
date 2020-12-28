@@ -1,11 +1,13 @@
 @import "../common-css/style-common.scss";
 
 
-
+body{
+    padding-bottom: 0;
+}
 
 main{
-    padding-top: 100px;
-    height: 50vh;
+    padding-top: 5%;
+    height:30%;
     
 }
 button{
@@ -72,42 +74,47 @@ button{
     display: grid;
     grid-template-columns: 30% 70%;
     grid-gap: 1rem;
-    width: 90vw;
+    width: 80vw;
     margin: auto; 
 }
 
 .computer-card{
     display: grid;
+    width: 100%;
     grid-template-rows: 60% 20% 20%;
     padding: 30px;
-    justify-self: center;
+    justify-self: self-end;
     text-align: center;
     img{
-        width: 200px;
+        width: 250px;
+        justify-self: center;
+        z-index: -1;
     }
 }
 .replay-btn-div-win, .replay-btn-div-lose{
     display: none;
-    position: absolute;
     width: 100%; 
-    height: 60%;
+    height: 100%;
     padding: 0;
     opacity: .9;
-    z-index: 100;
 }
 
-
-
-
 #replay, #replay-win{
-    top: 40%;
+    position:absolute;
+    top:200%; 
+    
+    width:100px;
+    margin-top:-25%;
+    text-align:center;
+
+    top: 50%;
     border: 2px solid $yellow;
     height: 350px;
     width: 350px;
     background-color: $yellow;
     border-radius: 50%;
     right: 40%;
-    z-index: 1;
+    z-index: 100;
     outline: none;   
     h1{
         color: $darkblue;
@@ -120,7 +127,7 @@ button{
 
 .player-card{
     background-color: $medblue;
-    width: 80%;
+    width: 60%;
     margin:auto;
     padding: 5px 5px 30px 5px;
     z-index: -1;
@@ -136,6 +143,7 @@ button{
         padding: 5px 0;
     }
     h2{
+        text-align: center;
         color: $darkblue;
         font-size: 80px;
         font-weight: 800;
@@ -145,7 +153,6 @@ button{
 .card{
     border-radius: 10px;
     background-color: $silverblue;
-    width: 80%;
     margin:auto;
     display: grid;
     grid-template-columns: repeat(4, 25%);
@@ -154,12 +161,7 @@ button{
         width: 100%;
         justify-self: center;
         padding: 5px;   
-    }
-  
-}
-.card * {
-    height: 130px;
-    width: 130px;
+    }  
 }
 
 
@@ -200,6 +202,7 @@ button{
         grid-template-columns: 100%;
     }
     .computer-card{
+        width: 90%;
         display: grid;
         grid-template-columns: 60% 40%;
         grid-template-rows: 30% 70%;
@@ -207,29 +210,37 @@ button{
         grid-gap: 10px;
         button{
             align-self: center;
+            grid-column: 2/3;
+            grid-row: 2/3;
         }
         img{
             grid-row:1/3;
         }
         h4{
+            font-size: 1.2rem;
             grid-column: 2/3;
-            grid-row: 2/3;
+            grid-row: 1/2;
         }
     }
     .player-card{
         width: 95%; 
-        margin: 10% auto;
+        margin: auto;
         
+    }
+    .card-title h2{
+        font-size: 3rem;
     }
     .card{
         width: 100%;
+        height: 100%;
+        img{
+            max-width: 100%;
+            object-fit: contain;
+        }
     }
-    .card *{
-        width: 90px;
-        height: 90px; 
-    }
+
+
     .share-btn-container {
-        
         i {
             font-size: 10px;    
         }
@@ -237,27 +248,32 @@ button{
     // footer css
     footer{
         position: fixed;
+        width: 100%;
     }
 }
 
-@media only screen and (max-width: 468px) {
+@media only screen and (max-width: 678px) {
     
     .computer-card{
-        height: auto;
         grid-template-columns: 100%;
-        grid-template-rows: 50% 30% 20%;
+        grid-template-rows: 20% 20% 60%;
         justify-items: center;
-        padding: 5px;
+        grid-gap: 10px;
+        button{
+           grid-row: 2/3;
+           grid-column: 1/2;
+        }
         img{
-            padding:10px;
-            grid-row: 1/2;
+            grid-row: 3/4;
         }
         h4{
-            font-size: 20px;
             grid-column: 1/2;
-            grid-row: 2/3;
+            grid-row: 1/2;
+            font-size: .9rem;
         }
-     
-}
+    }
+    .card-title h2{
+        font-size: 1.5rem;
+    }
    
 }
