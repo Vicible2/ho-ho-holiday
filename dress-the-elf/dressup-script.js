@@ -21,6 +21,13 @@
             interact.modifiers.restrictRect({
                 restriction: document.getElementById("container-game"),
                 endOnly: true
+            }),
+
+            interact.modifiers.snap({
+                targets: [ { y: 122 } ] ,
+                offset: document.getElementById("container-game"),
+                relativePoints: [
+                    { x: 0  , y: 0   }],
             })
         ]
     }))();
