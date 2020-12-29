@@ -1,106 +1,107 @@
-let nameLists=[];
-let inputNames=document.getElementById("names");
+let nameLists = [];
+let inputNames = document.getElementById("names");
 
 
 document.getElementById("submit").addEventListener("click", (event) => {
     event.preventDefault();
 
     nameLists.push(inputNames.value);
-    console.log(nameLists);
+    // console.log(nameLists);
 
-   
+
 
 });
 
-document.getElementById("result").addEventListener("click", (event) => {
-    event.preventDefault();
-
-event.preventDefault();
- document.getElementById("inputpeople").style.display="none";
- let output=document.getElementById("outputText");
- output.innerHTML="Here is your dearest people :"+ nameLists;
- 
+function getPairs(myPeople) {
 
 
-
-
-    function drawList(){
-     output.innerHTML = '<option value="">Who are you?</option>';
-     for (var i = nameLists.length - 1; i >= 0; i--) {
-         var option = document.createElement('option');
-         option.value = i;
-         option.innerHTML = nameLists[i];
-         output.appendChild(option);
-         console.log(option);
-     }
-
-
-    
-    }
-    
-     
- 
- 
- 
-
-
-    let pair = function (myPeople) {
-    
-    
-    let emptyArray = [];//empty array to put paired names
+    let emptyArray = []; //empty array to put paired names
     let recipients = myPeople.slice(); // variable to divide all the names one by one 
 
-    // var winner = letsPairUp[Math.floor(Math.random()*letsPairUp.length)];
-    // console.log(winner);
+
 
     for (let i = 0; i < myPeople.length; i++) { //loop through the names that are sliced
 
-        let sender = myPeople[i];		// var to get the index of people
-        let randomNumber = Math.floor(Math.random() * recipients.length -1); //var to randomly get the number of divided people's 
+        let sendername = myPeople[i]; // var to get the index of people
+        let randomNumber = Math.floor(Math.random() * recipients.length - 1); //var to randomly get the number of divided people's 
 
-    while (recipients[randomNumber] === sender) { // divided people's random number is equal to sender!! Can't send gift to myself
+        while (recipients[randomNumber] === sendername) { // divided people's random number is equal to sender!! Can't send gift to myself
 
-        randomNumber = Math.floor(Math.random() * recipients.length); // not sure why its repeated as line 34
-    }
+            randomNumber = Math.floor(Math.random() * recipients.length ); // not sure why its repeated as line 34
+        }
 
         let recipient = recipients.splice(randomNumber, 1)[0];
-        emptyArray.push({sender: sender,receiver: recipient});
+        emptyArray.push({
+            sender: sendername,
+            receiver: recipient
+        });
 
-        document.getElementById("yourpair").innerHTML= sender +" "+ "Prepare your surprise for " + " "  + recipient;
+        document.getElementById("yourpair").innerHTML = sendername + " " + "Prepare your surprise for " + " " + recipient;
 
     }
-    
+
     return emptyArray;
 
-     };
-     //try for dropdown select value 
+};
+
+document.getElementById("result").addEventListener("click", (event) => {
+    event.preventDefault();
+    document.getElementById("inputpeople").style.display = "none";
+    let output = document.getElementById("outputText");
+    output.innerHTML = "Here is your dearest people :" + nameLists;
+
+    drawList();
+
+    function drawList() {
+        output.innerHTML = '<option value="">Who are you?</option>';
+        for (var i = nameLists.length - 1; i >= 0; i--) {
+            var option = document.createElement('option');
+            option.value = nameLists[i];
+            option.innerHTML = nameLists[i];
+            output.appendChild(option);
+            console.log(option);
+        }
+
+    }
+
+    let namesPairs=getPairs(nameLists);
+    console.log(namesPairs);
     
 
 
-console.log(pair(nameLists));
+    output.addEventListener("change", function (event) {
 
-    emptyArray=pair(nameLists);
-    emptyArray.forEach(person => {
-        let take=person.receiver;
-        let sent=person.sender;
-        console.log(sent);
-        console.log(take);
+    let sender=event.target.value;
+    console.log(sender);
+
+    let taker;
+    
+    
+
+    for (let i = namesPairs.length -1;i >= 0; i--){
+        // let currentPair=Object.values(namesPairs[i].sender);
+        // console.log(currentPair);
+        if(namesPairs[i].sender===sender){
+            console.log(namesPairs[i].sender)
+            taker=(namesPairs[i].receiver)
+            console.log(taker);
+        }
+
+     }       
+     document.getElementById("yourpair").innerHTML = event.target.value +"," +" YOUR SECRET SANTA IS : " + taker ;
 
 
 
- });
 
- drawList();
+
+    })
+
+
+
+
+
+
+
+
 
 });
-
-
-
-
-
-
-
-
-
-
-
