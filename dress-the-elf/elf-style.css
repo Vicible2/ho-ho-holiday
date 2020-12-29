@@ -51,6 +51,26 @@ p {
      object-fit: contain;
 }
 
+.explain {
+  text-align: center;
+  height: 450px;
+  width: 300px;
+  padding: 10px;
+}
+
+.explain h1 {
+  color: #001B3D;
+  font-family: "Amatic SC", cursive;
+  font-size: 60px;
+  text-align: center;
+}
+
+.explain p {
+  color: #001B3D;
+  font-family: "Open Sans Condensed", sans-serif;
+  padding-top: 50px;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,7 +78,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 150px;
+  padding-top: 100px;
   margin-bottom: -150px;
 }
 
@@ -71,8 +91,8 @@ main {
 
 #container-game {
   width: 500px;
-  height: 500px;
-  background-color: #F5D3A0;
+  height: 450px;
+  background-image: url("img/gamebackground.png");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,12 +100,29 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 20px;
+  border-radius: 8px;
 }
 
 .container {
   background-color: #E1F2F7;
-  width: 1000px;
-  height: 575px;
+  width: 850px;
+  height: 500px;
+  padding-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+}
+
+#wraper {
+  width: 500px;
+  height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,14 +131,28 @@ main {
           justify-content: center;
 }
 
-#wraper {
-  width: 500px;
-  height: 500px;
+/* Share Section start */
+.share-btn-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.share-btn-container a {
+  margin: 12px 0;
+}
+
+.share-btn-container a i {
+  font-size: 25px;
+  color: #E1F2F7;
 }
 /*# sourceMappingURL=elf-style.css.map */
