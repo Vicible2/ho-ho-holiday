@@ -1,26 +1,26 @@
-# Welcome to our holiday page!
---- 
+# Welcome to our Holiday Page!
 
-Our christmas-themed mini-game page is finally up for business! Take a look around and have some fun!
-## [Ho-ho-holiday Games!](https://vicible2.github.io/ho-ho-holiday/ "HO HO HOLIDAY HOME PAGE")
+
+Our christmas-themed mini-game page is finally up for business! A page with 4 small games build by **Javascript**. 
+Perfect to spend your Christmas holiday with us, take a look around and have some fun!
+<br><br>
+## Check out our page: [Ho-ho-holiday Games!](https://vicible2.github.io/ho-ho-holiday/ "HO HO HOLIDAY HOME PAGE")
+<br>
+
+
 ---
+
 
 ## Whats in here??
 
-Check out our Ho-ho-holiday themed games now! 
+| Game | Description | Builder | Highlight of the Builder |
+| ----------- | ----------- | ----------- |  ----------- |
+| Dress the Elf! ![Elf](./running-game/assets/elf.png "elf icon")  | Dress your little helper in time for the Christmas Party!<br> The game is built with JS library | [Ilaria](https://github.com/ilaria-orlando "Ilaria's Github page") | Also make the amazing snowy footer by Illustor :snowflake: |
+| Running game! ![Santa](./running-game/assets/santa-claus.png  "Santa icon") | Dodge the evil elves and gifts and help Santa get his highest Christmas score ever! | [Manten](https://github.com/Vicible2 "Manten's Github page") |  |
+|Gift Name Generator ![Gift](./running-game/assets/gift-box.png  "Christmas gift") | Ready for the secret Santa gift exchange? | [Selin](https://github.com/selilulu "Selin's Github page") | |
+| Holiday Bingo!  ![card](./running-game/assets/christmas-card.png  "Christmas card") | Can you get a bingo with 4 of them in a row? | [Wing](https://github.com/chevtong "Wing's Github page") | Who also handle the overall styling for pages to create this winter cozy feeling. :snowman:
+<br>
 
-* Dress the Elf! ![Elf](./running-game/assets/elf.png "elf icon") 
-
-  * Dress your little helper in time for the Christmas Party!
-* Running game! ![Santa](./running-game/assets/santa-claus.png  "Santa icon") 
-
-  * Dodge the evil elves and gifts and help Santa get his highest Christmas score ever!
-
-* Gift Name Generator ![Gift](./running-game/assets/gift-box.png  "Christmas gift") 
-  * Ready for the secret Santa gift exchange?
-
-* Holiday Bingo!  ![card](./running-game/assets/christmas-card.png  "Christmas card") 
-  * Can you get a bingo with 4 of them in a row?
 
 ## What is it?
 
@@ -57,26 +57,13 @@ Some of the following features were required:
 * Run over issues & problems together
   * Merge issues
   * Code not working for someone?
-  * ...
+ 
 
 ---
 
-### Contact us for more info or questions!
-### Devlopers used:
 
-* Wing Tong
-  * [Wing's Github page](https://github.com/chevtong "Wing's Github page")
-
-* Ilaria Orlando
-  * [Ilaria's Github page](https://github.com/ilaria-orlando "Ilaria's Github page")
   
-* Selin Tezel
-  * [Selin's Github page](https://github.com/selilulu "Selin's Github page")
-
-* Manten Devillé
-  * [Manten's Github page](https://github.com/Vicible2 "Manten's Github page")
-  
-### Technology used:
+### Technology and Tools:
 
 * IDE:
   * PHP-storm
@@ -93,4 +80,14 @@ Some of the following features were required:
 * Sources:
   * flaticon
   * zapsplat
-  * ...
+---
+### Contact us for more info or questions!
+#### Contirbutors:
+
+* [Wing Tong Github page](https://github.com/chevtong "Wing's Github page")
+
+* [Ilaria Orlando Github page](https://github.com/ilaria-orlando "Ilaria's Github page")
+  
+* [Selin Tezel Github page](https://github.com/selilulu "Selin's Github page")
+
+* [Manten Devillé Github page](https://github.com/Vicible2 "Manten's Github page")
