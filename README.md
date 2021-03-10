@@ -15,10 +15,10 @@ Perfect to spend your Christmas holiday with us, take a look around and have som
 
 | Game | Description | Builder | Highlight of the Builder |
 | ----------- | ----------- | ----------- |  ----------- |
-| Dress the Elf! ![Elf](./running-game/assets/elf.png "elf icon")  | Dress your little helper in time for the Christmas Party!<br> The game is built with JS library | [Ilaria](https://github.com/ilaria-orlando "Ilaria's Github page") | Also make the amazing snowy footer by Illustor :snowflake: |
-| Running game! ![Santa](./running-game/assets/santa-claus.png  "Santa icon") | Dodge the evil elves and gifts and help Santa get his highest Christmas score ever! | [Manten](https://github.com/Vicible2 "Manten's Github page") |  |
-|Gift Name Generator ![Gift](./running-game/assets/gift-box.png  "Christmas gift") | Ready for the secret Santa gift exchange? | [Selin](https://github.com/selilulu "Selin's Github page") | |
-| Holiday Bingo!  ![card](./running-game/assets/christmas-card.png  "Christmas card") | Can you get a bingo with 4 of them in a row? | [Wing](https://github.com/chevtong "Wing's Github page") | Who also handle the overall styling for pages to create this winter cozy feeling. :snowman:
+| ![Elf](./running-game/assets/elf.png "elf icon") <br> Dress the Elf!  | Dress your little helper in time for the Christmas Party!<br> The game is built with JS library | [Ilaria](https://github.com/ilaria-orlando "Ilaria's Github page") | Also make the amazing snowy footer by Illustor :snowflake: |
+| ![Santa](./running-game/assets/santa-claus.png  "Santa icon") <br>Running game! | Dodge the evil elves and gifts and help Santa get his highest Christmas score ever! | [Manten](https://github.com/Vicible2 "Manten's Github page") |  |
+| ![Gift](./running-game/assets/gift-box.png  "Christmas gift") <br>Gift Name Generator| Ready for the secret Santa gift exchange? | [Selin](https://github.com/selilulu "Selin's Github page") | |
+|![card](./running-game/assets/christmas-card.png  "Christmas card") <br> Holiday Bingo!   | Can you get a bingo with 4 of them in a row? | [Wing](https://github.com/chevtong "Wing's Github page") | Who also handle the overall styling for pages to create this winter cozy feeling. :snowman:
 <br>
 
 
